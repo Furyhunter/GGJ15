@@ -8,7 +8,14 @@ public class Shoot : MonoBehaviour
     public GameObject bullet;
     private float fire_delay = 0.0f;
 
+    private PlayerAttrs attrs;
+
     public Weapon CurrentWeapon;
+
+    void Start()
+    {
+        attrs = GetComponent<PlayerAttrs>();
+    }
 
     void Update ()
     
@@ -19,8 +26,16 @@ public class Shoot : MonoBehaviour
         }
         if (Input.GetKey ("space") && fire_delay <= 0) // Fix for controller
         {
-            create_shots(CurrentWeapon.Ammunition, CurrentWeapon.ProjCount, CurrentWeapon.ProjSpeed,
-                         CurrentWeapon.ProjSpread, CurrentWeapon.RefireDelay);
+            if (attrs.ammunition[(int)CurrentWeapon.Ammo] <= 0)
+            {
+                //Do Something
+            }
+            else
+            {
+                attrs.ammunition[(int)CurrentWeapon.Ammo]--;
+                create_shots(CurrentWeapon.Ammunition, CurrentWeapon.ProjCount, CurrentWeapon.ProjSpeed,
+                             CurrentWeapon.ProjSpread, CurrentWeapon.RefireDelay);
+            }
         }
     }
 
