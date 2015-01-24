@@ -12,7 +12,6 @@ public class PlayerAttrs : MonoBehaviour
     public AudioClip deathSound;
 
     public int[] ammunition = {0, 0, 0, 0};
-    private Shoot shootScript;
 
     Animator anim;
     AudioSource playerAudio;
@@ -23,7 +22,6 @@ public class PlayerAttrs : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
-        shootScript = GetComponent<Shoot>();
         currentHealth = maxHealth;
     }
 

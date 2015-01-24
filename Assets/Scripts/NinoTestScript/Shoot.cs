@@ -5,7 +5,6 @@ using System.Collections;
 
 public class Shoot : MonoBehaviour
 {
-    public GameObject bullet;
     private float fire_delay = 0.0f;
 
     private PlayerAttrs attrs;
