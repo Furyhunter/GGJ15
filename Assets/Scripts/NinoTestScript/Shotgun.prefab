@@ -43,7 +43,8 @@ MonoBehaviour:
   ProjCount: 7
   ProjSpeed: 23
   ProjSpread: 16
-  RefireDelay: .649999976
+  RefireDelay: 1
+  Ammo: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

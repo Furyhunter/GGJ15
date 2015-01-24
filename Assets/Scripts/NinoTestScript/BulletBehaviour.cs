@@ -18,12 +18,12 @@ public class BulletBehaviour : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject != owner)
+        if (collider.gameObject != owner && collider.gameObject.tag != "Projectile")
         {
             //do bullet things
             if (DestroyOnContact)
             {
-                GameObject.Destroy(gameObject, 0.0f);
+              GameObject.Destroy(gameObject, 0.0f);
             }
         }
     }
