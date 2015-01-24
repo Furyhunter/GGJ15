@@ -7,7 +7,7 @@ using InControl;
 public class PlayerAttrs : MonoBehaviour
 {
     public int maxHealth = 100;
-    private int currentHealth;
+    public int currentHealth;
     
     public Slider healthSlider;
     public AudioClip deathSound;
@@ -32,9 +32,9 @@ public class PlayerAttrs : MonoBehaviour
     {
         currentHealth -= amount;
 
-        healthSlider.value = currentHealth;
+        //healthSlider.value = currentHealth;
 
-        playerAudio.Play();
+        //playerAudio.Play();
 
         if (currentHealth <= 0 && !isDead)
         {
@@ -47,10 +47,12 @@ public class PlayerAttrs : MonoBehaviour
     {
         isDead = true;
 
-        anim.SetTrigger("Die");
+        //anim.SetTrigger("Die");
 
-        playerAudio.clip = deathSound;
-        playerAudio.Play();
+        //playerAudio.clip = deathSound;
+        //playerAudio.Play();
+
+        Destroy(gameObject);
     }
 
     public int getCurrentHealth()

@@ -48,6 +48,11 @@ public class Charger : MonoBehaviour
         }
         else if (phase == ChargerPhase.PHASE_TURNING)
         {
+            if (lastTarget == null)
+            {
+                phase = ChargerPhase.PHASE_TARGETING;
+                return;
+            }
             Vector3 dist = lastTarget.transform.position - transform.position;
             Vector3 rot = Vector3.RotateTowards(transform.forward, dist, 0.1f, 0);
             transform.rotation = Quaternion.LookRotation(rot);
@@ -67,6 +72,12 @@ public class Charger : MonoBehaviour
         }
         else if (phase == ChargerPhase.PHASE_CHARGING)
         {
+            if (lastTarget == null)
+            {
+                phase = ChargerPhase.PHASE_TARGETING;
+                return;
+            }
+                
             Vector3 dist = lastTarget.transform.position - transform.position;
             Vector3 rot = Vector3.RotateTowards(transform.forward, dist, 0.1f, 0);
             transform.rotation = Quaternion.LookRotation(rot);

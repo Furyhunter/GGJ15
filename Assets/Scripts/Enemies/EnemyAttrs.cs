@@ -10,7 +10,7 @@ public class EnemyAttrs : MonoBehaviour
 
     Animator anim;
     AudioSource enemyAudio;
-   // CapsuleCollider collider;
+    //CapsuleCollider collider;
 
     ParticleSystem hitParticles;
 
@@ -58,7 +58,7 @@ public class EnemyAttrs : MonoBehaviour
     {
         isDead = true;
 
-        collider.isTrigger = true;
+        //collider.isTrigger = true;
 
         anim.SetTrigger("Dead");
 
