@@ -18,7 +18,6 @@ public class Exploder : MonoBehaviour
         nav = GetComponent <NavMeshAgent> ();
     }
 
-
     void Update ()
     {
         // If the enemy and the player have health left...

@@ -27,12 +27,6 @@ public class PlayerAttrs : MonoBehaviour
         currentHealth = maxHealth;
     }
 
-
-    void Update()
-    {
-    }
-
-
     public void TakeDamage(int amount)
     {
         currentHealth -= amount;
