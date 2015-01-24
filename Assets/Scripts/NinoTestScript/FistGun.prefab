@@ -39,11 +39,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de89772fe55a5d4aa26e81a4b5889fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ammunition: {fileID: 0}
-  ProjCount: 0
-  ProjSpeed: 0
-  ProjSpread: 0
-  RefireDelay: 0
+  Ammunition: {fileID: 110170, guid: baaf98b0ef5e37949a2aa9cd9017b30d, type: 2}
+  ProjCount: 2
+  ProjSpeed: 23
+  ProjSpread: 6
+  RefireDelay: .25
+  Ammo: 3
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
