@@ -2,7 +2,9 @@ fileFormatVersion: 2
 guid: 5f4878f71613780498b2f61e29eb29d1
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - bullet: {instanceID: 0}
+  - LodGroupTest: {fileID: 20528224, guid: 65b7f50d83991da4389297bf35b1c14e, type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
