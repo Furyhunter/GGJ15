@@ -4,10 +4,11 @@ using System.Collections;
 public class Weapon : MonoBehaviour
 {
 	public enum AmmoType {
-        rifle = 0 , 
+        rifle = 0,
         shotgun = 1, 
         rocket = 2, 
-        pistol = 3};
+        pistol = 3
+    };
 
 	public GameObject Ammunition; 
 	public int ProjCount;

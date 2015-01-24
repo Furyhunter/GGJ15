@@ -24,11 +24,18 @@ public class Shoot : MonoBehaviour
         {
             fire_delay -= Time.deltaTime;
         }
-        if (Input.GetKey ("space") && fire_delay <= 0 && attrs.ammunition[(int)CurrentWeapon.Ammo] > 0) // Fix for controller
+        if (Input.GetKey ("space") && fire_delay <= 0) // Fix for controller
         {
-            attrs.ammunition[(int)CurrentWeapon.Ammo]--;
-            create_shots(CurrentWeapon.Ammunition, CurrentWeapon.ProjCount, CurrentWeapon.ProjSpeed,
-                         CurrentWeapon.ProjSpread, CurrentWeapon.RefireDelay);
+            if (attrs.ammunition[(int)CurrentWeapon.Ammo] <= 0)
+            {
+                //Do Something
+            }
+            else
+            {
+                attrs.ammunition[(int)CurrentWeapon.Ammo]--;
+                create_shots(CurrentWeapon.Ammunition, CurrentWeapon.ProjCount, CurrentWeapon.ProjSpeed,
+                             CurrentWeapon.ProjSpread, CurrentWeapon.RefireDelay);
+            }
         }
     }
 
