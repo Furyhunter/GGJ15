@@ -40,7 +40,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 110170, guid: baaf98b0ef5e37949a2aa9cd9017b30d, type: 2}
-  ProjCount: 12
+  ProjCount: 7
   ProjSpeed: 23
   ProjSpread: 16
   RefireDelay: 1
