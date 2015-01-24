@@ -37,6 +37,7 @@ public class Shoot : MonoBehaviour
         {
             Vector3 proj_head = get_weapon_spread(proj_spread);
             GameObject new_bullet = (GameObject) Instantiate(ammunition, transform.position, Quaternion.identity);
+            new_bullet.gameObject.GetComponent<BulletBehaviour>().owner = gameObject;
             new_bullet.GetComponent<Rigidbody>().velocity = proj_head * proj_speed;
         }
         fire_delay = refire_delay;
