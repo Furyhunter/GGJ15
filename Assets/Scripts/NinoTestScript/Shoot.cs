@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using InControl;
 
 
 
@@ -8,12 +9,15 @@ public class Shoot : MonoBehaviour
     private float fire_delay = 0.0f;
 
     private PlayerAttrs attrs;
-
+    
     public Weapon CurrentWeapon;
+
+    private InputDevice controller;
 
     void Start()
     {
         attrs = GetComponent<PlayerAttrs>();
+        controller = gameObject.GetComponent<PlayerAttrs>().controller;
     }
 
     void Update ()
@@ -23,7 +27,7 @@ public class Shoot : MonoBehaviour
         {
             fire_delay -= Time.deltaTime;
         }
-        if (Input.GetKey ("space") && fire_delay <= 0) // Fix for controller
+        if (controller.RightTrigger && fire_delay <= 0) // Fix for controller
         {
             if (attrs.ammunition[(int)CurrentWeapon.Ammo] <= 0)
             {
@@ -50,7 +54,7 @@ public class Shoot : MonoBehaviour
         for (int i = proj_count; i > 0; --i)
         {
             Vector3 proj_head = get_weapon_spread(proj_spread);
-            GameObject new_bullet = (GameObject) Instantiate(ammunition, transform.position, Quaternion.identity);
+            GameObject new_bullet = (GameObject) Instantiate(ammunition, transform.position + new Vector3(0,1,0), Quaternion.identity);
             new_bullet.gameObject.GetComponent<BulletBehaviour>().owner = gameObject;
             new_bullet.GetComponent<Rigidbody>().velocity = proj_head * proj_speed;
         }
