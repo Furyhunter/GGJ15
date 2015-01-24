@@ -43,7 +43,7 @@ MonoBehaviour:
   ProjCount: 2
   ProjSpeed: 23
   ProjSpread: 6
-  RefireDelay: .25
+  RefireDelay: .349999994
   Ammo: 3
 --- !u!1001 &100100000
 Prefab:

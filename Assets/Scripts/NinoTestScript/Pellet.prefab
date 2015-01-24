@@ -13,10 +13,9 @@ GameObject:
   - 23: {fileID: 2310170}
   - 54: {fileID: 5480162}
   - 114: {fileID: 11444488}
-  - 114: {fileID: 11457862}
   m_Layer: 0
   m_Name: Pellet
-  m_TagString: Untagged
+  m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -91,18 +90,6 @@ MonoBehaviour:
   ExplosionRadius: 0
   Damage: 4
   owner: {fileID: 0}
---- !u!114 &11457862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110170}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae93f2655bba357469d52a11d89c4aca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  BulletLife: 4
 --- !u!136 &13610170
 CapsuleCollider:
   m_ObjectHideFlags: 1
