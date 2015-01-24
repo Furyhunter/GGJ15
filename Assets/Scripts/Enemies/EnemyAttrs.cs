@@ -10,7 +10,7 @@ public class EnemyAttrs : MonoBehaviour
 
     Animator anim;
     AudioSource enemyAudio;
-    CapsuleCollider collider;
+   // CapsuleCollider collider;
 
     ParticleSystem hitParticles;
 
@@ -22,7 +22,7 @@ public class EnemyAttrs : MonoBehaviour
         anim = GetComponent<Animator>();
         enemyAudio = GetComponent<AudioSource>();
         hitParticles = GetComponentInChildren<ParticleSystem>();
-        collider = GetComponent<CapsuleCollider>();
+        //collider = GetComponent<CapsuleCollider>();
 
         currentHealth = maxHealth;
     }
