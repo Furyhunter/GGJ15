@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     CharacterController Mover; 
     void Start()
     {
-        device = InputManager.ActiveDevice;
+        device = gameObject.GetComponent<PlayerAttrs>().controller;
         control = device.GetControl(InputControlType.Action1);
         Mover = gameObject.GetComponent<CharacterController>();
     }
@@ -25,8 +25,13 @@ public class PlayerController : MonoBehaviour
        Mover.SimpleMove(InputDirection);
         float Jumblies = Mathf.Max(Mathf.Abs(x), Mathf.Abs(y));
        gameObject.GetComponentInChildren<Animator>().SetFloat("Speed", Jumblies);
-       InputDirection = new Vector3(device.RightStickX * PlayerSpeed, 0, 
-            device.RightStickY * PlayerSpeed);
-       transform.rotation = Quaternion.LookRotation(InputDirection, Vector3.up);
+        x = device.RightStickX;
+        y = device.RightStickY;
+        if (x != 0 && y != 0)
+        {
+            InputDirection = new Vector3(device.RightStickX * PlayerSpeed, 0,
+                 device.RightStickY * PlayerSpeed);
+            transform.rotation = Quaternion.LookRotation(InputDirection, Vector3.up);
+        }
 	}
 }
