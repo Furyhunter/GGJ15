@@ -1,13 +1,18 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 using System.Collections;
+using System.Collections.Generic;
 
 public class PlayerAttrs : MonoBehaviour
 {
     public int maxHealth = 100;
     private int currentHealth;
+    
     public Slider healthSlider;
     public AudioClip deathSound;
+
+    public int[] ammunition = {0, 0, 0, 0};
+    private Shoot shootScript;
 
     Animator anim;
     AudioSource playerAudio;
@@ -18,6 +23,7 @@ public class PlayerAttrs : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
+        shootScript = GetComponent<Shoot>();
         currentHealth = maxHealth;
     }
 
@@ -45,8 +51,6 @@ public class PlayerAttrs : MonoBehaviour
     void Death()
     {
         isDead = true;
-
-        //playerShooting.DisableEffects ();
 
         anim.SetTrigger("Die");
 

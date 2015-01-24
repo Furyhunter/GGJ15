@@ -8,4 +8,6 @@ public class Weapon : MonoBehaviour
 	public int ProjSpeed;
 	public int ProjSpread; 
 	public float RefireDelay;
+
+    public Shoot.AmmoType ammo;
 }
