@@ -10,11 +10,6 @@ public class AmmoSpawner : MonoBehaviour
 	{
         Spawn();
 	}
-	
-	void Update()
-	{
-	
-	}
 
     void Spawn()
     {

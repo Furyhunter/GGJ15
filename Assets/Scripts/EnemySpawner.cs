@@ -19,11 +19,6 @@ public class EnemySpawner : MonoBehaviour
         Spawn();
     }
 
-    void Update()
-    {
-
-    }
-
     void Spawn()
     {
         int index = enemies.Length - 1;
