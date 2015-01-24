@@ -2,6 +2,7 @@
 using UnityEngine.UI;
 using System.Collections;
 using System.Collections.Generic;
+using InControl;
 
 public class PlayerAttrs : MonoBehaviour
 {
@@ -17,12 +18,14 @@ public class PlayerAttrs : MonoBehaviour
     AudioSource playerAudio;
     bool isDead;
 
+    public InputDevice controller;
 
     void Awake()
     {
         anim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
         currentHealth = maxHealth;
+        controller = InputManager.ActiveDevice;
     }
 
     public void TakeDamage(int amount)
