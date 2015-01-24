@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyAttrs : MonoBehaviour
 {
     public int maxHealth = 100;
-    int currentHealth;
+    private int currentHealth;
     public float sinkSpeed = 2.5f;
     public AudioClip deathSound;
 
@@ -23,7 +23,7 @@ public class EnemyAttrs : MonoBehaviour
         enemyAudio = GetComponent<AudioSource>();
         hitParticles = GetComponentInChildren<ParticleSystem>();
         collider = GetComponent<CapsuleCollider>();
-        
+
         currentHealth = maxHealth;
     }
 
