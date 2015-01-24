@@ -26,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
 
     void Spawn()
     {
-        int index = enemies.Length;
+        int index = enemies.Length - 1;
 
         while (points > 0)
         {
