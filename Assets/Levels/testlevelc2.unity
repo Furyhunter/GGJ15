@@ -176,7 +176,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
-  ProjSpeed: 14
+  ProjSpeed: 30
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
@@ -231,7 +231,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 466808, guid: 6a1385ffeb794ca42b99af33a729922b, type: 2}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 408608, guid: 6a1385ffeb794ca42b99af33a729922b, type: 2}
       propertyPath: m_RootOrder
@@ -797,7 +797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
-  ProjSpeed: 14
+  ProjSpeed: 30
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
@@ -979,7 +979,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
-  ProjSpeed: 14
+  ProjSpeed: 30
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
@@ -1094,8 +1094,8 @@ Transform:
   m_PrefabParentObject: {fileID: 447420, guid: 9a29f93ba4f23ca4f881197c4b9004c3, type: 2}
   m_PrefabInternal: {fileID: 1116091379}
   m_GameObject: {fileID: 440103765}
-  m_LocalRotation: {x: .382683486, y: 0, z: 0, w: .923879564}
-  m_LocalPosition: {x: 0, y: 7, z: -7}
+  m_LocalRotation: {x: .707106829, y: 0, z: 0, w: .707106829}
+  m_LocalPosition: {x: 0, y: 13, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1120107389}
@@ -1767,7 +1767,7 @@ Transform:
   m_Children:
   - {fileID: 116700246}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 13
 --- !u!65 &704342742
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1824,7 +1824,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
-  ProjSpeed: 14
+  ProjSpeed: 30
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
@@ -1934,7 +1934,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
-  ProjSpeed: 14
+  ProjSpeed: 30
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
@@ -2512,7 +2512,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 110170, guid: baaf98b0ef5e37949a2aa9cd9017b30d, type: 2}
   ProjCount: 1
-  ProjSpeed: 23
+  ProjSpeed: 45
   ProjSpread: 4
   RefireDelay: .0850000009
   PickupDelay: 0
@@ -2696,7 +2696,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 110170, guid: baaf98b0ef5e37949a2aa9cd9017b30d, type: 2}
   ProjCount: 7
-  ProjSpeed: 23
+  ProjSpeed: 45
   ProjSpread: 16
   RefireDelay: 1
   PickupDelay: 0
@@ -2888,6 +2888,22 @@ Prefab:
       propertyPath: m_RootOrder
       value: 11
       objectReference: {fileID: 0}
+    - target: {fileID: 447420, guid: 9a29f93ba4f23ca4f881197c4b9004c3, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 447420, guid: 9a29f93ba4f23ca4f881197c4b9004c3, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: .707106829
+      objectReference: {fileID: 0}
+    - target: {fileID: 447420, guid: 9a29f93ba4f23ca4f881197c4b9004c3, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 447420, guid: 9a29f93ba4f23ca4f881197c4b9004c3, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 13
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 9a29f93ba4f23ca4f881197c4b9004c3, type: 2}
   m_RootGameObject: {fileID: 1120107388}
@@ -2921,7 +2937,7 @@ Transform:
   m_Children:
   - {fileID: 440103770}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!114 &1120107390
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3009,7 +3025,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
-  ProjSpeed: 14
+  ProjSpeed: 30
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
@@ -3729,7 +3745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
-  ProjSpeed: 14
+  ProjSpeed: 30
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
@@ -4001,7 +4017,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
-  ProjSpeed: 14
+  ProjSpeed: 30
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
@@ -4433,7 +4449,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
-  ProjSpeed: 14
+  ProjSpeed: 30
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
@@ -4526,7 +4542,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
-  ProjSpeed: 14
+  ProjSpeed: 30
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
