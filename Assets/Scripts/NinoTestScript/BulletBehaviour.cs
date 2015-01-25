@@ -23,12 +23,16 @@ public class BulletBehaviour : MonoBehaviour
             Collider[] hitColliders = Physics.OverlapSphere(transform.position, ExplosionRadius);
             for (int i = 0; i < hitColliders.Length; ++i)
             {
-                //harm enemies
-            }
-                if (DestroyOnContact)
+                if (hitColliders[i].gameObject.tag == "Enemy")
                 {
-                    GameObject.Destroy(gameObject, 0.0f);
+                    EnemyAttrs attr = hitColliders[i].gameObject.GetComponent<EnemyAttrs>();
+                    attr.TakeDamage(Damage);
                 }
+            }
+            if (DestroyOnContact)
+            {
+                GameObject.Destroy(gameObject, 0.0f);
+            }
         }
     }
 }
