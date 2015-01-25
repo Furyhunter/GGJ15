@@ -12,6 +12,8 @@ GameObject:
   - 23: {fileID: 2371592}
   - 95: {fileID: 9571592}
   - 114: {fileID: 11420376}
+  - 65: {fileID: 6551634}
+  - 65: {fileID: 6584764}
   m_Layer: 8
   m_Name: Rifle
   m_TagString: Weapon
@@ -58,6 +60,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 171592}
   m_Mesh: {fileID: 4300000, guid: ac4fd48f90db5524d8466070d9689b30, type: 3}
+--- !u!65 &6551634
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .934332311, y: .0630763769, z: .241150364}
+  m_Center: {x: -.209145457, y: -.0364623815, z: .0297372565}
+--- !u!65 &6584764
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 171592}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -.209145457, y: -.0364623815, z: .0297372565}
 --- !u!95 &9571592
 Animator:
   serializedVersion: 3

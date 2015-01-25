@@ -12,6 +12,8 @@ GameObject:
   - 23: {fileID: 2339582}
   - 95: {fileID: 9539582}
   - 114: {fileID: 11465492}
+  - 65: {fileID: 6599752}
+  - 65: {fileID: 6599750}
   m_Layer: 8
   m_Name: Shotgun
   m_TagString: Weapon
@@ -58,6 +60,30 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139582}
   m_Mesh: {fileID: 4300000, guid: c324a363d9bec0741a400892a7182d64, type: 3}
+--- !u!65 &6599750
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -.203567728, y: 0, z: -.0299066156}
+--- !u!65 &6599752
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139582}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: .911572695, y: .15827176, z: .251894623}
+  m_Center: {x: -.203567728, y: 0, z: -.0299066156}
 --- !u!95 &9539582
 Animator:
   serializedVersion: 3
