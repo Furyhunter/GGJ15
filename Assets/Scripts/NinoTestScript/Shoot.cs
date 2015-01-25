@@ -27,7 +27,7 @@ public class Shoot : MonoBehaviour
         {
             fire_delay -= Time.deltaTime;
         }
-        if (controller.RightTrigger && fire_delay <= 0) // Fix for controller
+        if (controller.RightTrigger && CurrentWeapon != null && fire_delay <= 0) // Fix for controller
         {
             if (attrs.ammunition[(int)CurrentWeapon.Ammo] <= 0)
             {

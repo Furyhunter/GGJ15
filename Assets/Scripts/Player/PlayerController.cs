@@ -43,20 +43,22 @@ public class PlayerController : MonoBehaviour
            Transform hand = gameObject.GetComponent<PlayerAttrs>().AttachPoint;
            if (hand.childCount > 0)
            {
+               gameObject.GetComponent<Shoot>().CurrentWeapon = null;
+
                Transform gun = hand.GetChild(0);
-               gun.gameObject.GetComponent<Weapon>().PickupDelay = 1.5f;
+               gun.gameObject.GetComponent<Weapon>().PickupDelay = 2f;
                gun.SetParent(null);
                gun.gameObject.rigidbody.isKinematic = false;
                
                gun.position += new Vector3(0, 1.5f, 0);
                gun.gameObject.rigidbody.AddForce(0, 250, 0);
-               gun.gameObject.rigidbody.AddTorque(50, 100, 0);
+               gun.gameObject.rigidbody.AddTorque(0, 200000, 0);
                gun.gameObject.rigidbody.detectCollisions = true;
            }
         }
 	}
 
-    void OnTriggerEnter(Collider collider)
+    void OnTriggerStay(Collider collider)
 
     {
         Debug.Log(collider.gameObject.tag);
@@ -67,6 +69,8 @@ public class PlayerController : MonoBehaviour
             collider.transform.SetParent(hand, false);
             collider.gameObject.transform.localPosition = Vector3.zero;
             collider.transform.localRotation = Quaternion.identity;
+
+            gameObject.GetComponent<Shoot>().CurrentWeapon = collider.gameObject.GetComponent<Weapon>();
         }
         else
         {
