@@ -20,15 +20,24 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (collider.gameObject != owner && collider.gameObject.tag != "Projectile")
         {
-            Collider[] hitColliders = Physics.OverlapSphere(transform.position, ExplosionRadius);
-            for (int i = 0; i < hitColliders.Length; ++i)
+            if (ExplosionRadius > 0)
             {
-                if (hitColliders[i].gameObject.tag == "Enemy")
+                Collider[] hitColliders = Physics.OverlapSphere(transform.position, ExplosionRadius);
+                for (int i = 0; i < hitColliders.Length; ++i)
                 {
-                    EnemyAttrs attr = hitColliders[i].gameObject.GetComponent<EnemyAttrs>();
-                    attr.TakeDamage(Damage);
+                    if (hitColliders[i].gameObject.tag == "Enemy")
+                    {
+                        EnemyAttrs attr = hitColliders[i].gameObject.GetComponent<EnemyAttrs>();
+                        attr.TakeDamage(Damage);
+                    }
                 }
             }
+            else
+            {
+                collider.gameObject.GetComponentsInParent<EnemyAttrs>()[0].TakeDamage(Damage);
+                collider.gameObject.GetComponent<EnemyAttrs>().TakeDamage(Damage);
+            }
+                
             if (DestroyOnContact)
             {
                 GameObject.Destroy(gameObject, 0.0f);

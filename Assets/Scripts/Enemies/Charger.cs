@@ -14,11 +14,12 @@ public class Charger : MonoBehaviour
     };
 
     EnemyAttrs attrs;
-    public CapsuleCollider frontCollider;
     GameObject lastTarget = null;
     ChargerPhase phase;
     float timer;
     Animator anim;
+    GameObject selection;
+    public int Damage = 7;
 
 	void Start()
 	{
@@ -33,7 +34,6 @@ public class Charger : MonoBehaviour
         if (phase == ChargerPhase.PHASE_TARGETING)
         {
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-            GameObject selection;
 
             if (players.Length == 0)
                 return;
@@ -66,6 +66,10 @@ public class Charger : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= 1.0)
             {
+                if (lastTarget != null && Vector3.Distance(lastTarget.transform.position, transform.position) < 2)
+                {
+                    lastTarget.GetComponent<PlayerAttrs>().TakeDamage(Damage);
+                }
                 timer = 0f;
                 phase = ChargerPhase.PHASE_CHARGING;
             }
