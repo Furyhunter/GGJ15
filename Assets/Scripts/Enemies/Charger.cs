@@ -14,13 +14,12 @@ public class Charger : MonoBehaviour
     };
 
     EnemyAttrs attrs;
-    public CapsuleCollider frontCollider;
     GameObject lastTarget = null;
     ChargerPhase phase;
     float timer;
     Animator anim;
     GameObject selection;
-    int Damage = 7;
+    public int Damage = 7;
 
 	void Start()
 	{
@@ -67,11 +66,9 @@ public class Charger : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= 1.0)
             {
-                Collider[] hit = Physics.OverlapSphere(transform.InverseTransformPoint(transform.localPosition + new Vector3(0,0,1)), 1, 9);
-                Debug.DrawLine(transform.position + transform.TransformDirection(Vector3.forward), transform.position, Color.red, 1.0f);
-                foreach (Collider e in hit)
+                if (lastTarget != null && Vector3.Distance(lastTarget.transform.position, transform.position) < 2)
                 {
-                    e.GetComponent<PlayerAttrs>().TakeDamage(Damage);
+                    lastTarget.GetComponent<PlayerAttrs>().TakeDamage(Damage);
                 }
                 timer = 0f;
                 phase = ChargerPhase.PHASE_CHARGING;
