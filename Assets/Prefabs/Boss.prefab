@@ -13,16 +13,17 @@ GameObject:
   - 54: {fileID: 5405644}
   - 114: {fileID: 11478822}
   - 114: {fileID: 11482214}
+  - 82: {fileID: 8200112}
   m_Layer: 0
   m_Name: Boss
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!1 &107916
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -39,7 +40,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &107918
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -56,7 +57,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &107920
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -73,7 +74,7 @@ GameObject:
   m_IsActive: 1
 --- !u!1 &107922
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -83,6 +84,21 @@ GameObject:
   - 23: {fileID: 2307920}
   m_Layer: 0
   m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &154250
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 454250}
+  m_Layer: 0
+  m_Name: Parent
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -98,10 +114,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
-  - {fileID: 407916}
-  - {fileID: 407918}
-  - {fileID: 407920}
-  - {fileID: 407922}
+  - {fileID: 454250}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!4 &407916
@@ -112,9 +125,9 @@ Transform:
   m_GameObject: {fileID: 107916}
   m_LocalRotation: {x: -.0230898503, y: .990433812, z: .135279924, w: -.0143923666}
   m_LocalPosition: {x: -.0199881699, y: .0495597348, z: .199198529}
-  m_LocalScale: {x: 15.3614998, y: 15.3614979, z: 15.3614979}
+  m_LocalScale: {x: 15.3614988, y: 15.3614988, z: 15.3614979}
   m_Children: []
-  m_Father: {fileID: 407914}
+  m_Father: {fileID: 454250}
   m_RootOrder: 0
 --- !u!4 &407918
 Transform:
@@ -124,9 +137,9 @@ Transform:
   m_GameObject: {fileID: 107918}
   m_LocalRotation: {x: .0210473351, y: .620364845, z: .783008337, w: -.040030282}
   m_LocalPosition: {x: -.0446907207, y: 1.11556983, z: .149339095}
-  m_LocalScale: {x: 14.2039347, y: 14.2039356, z: 14.2039356}
+  m_LocalScale: {x: 14.2039337, y: 14.2039356, z: 14.2039366}
   m_Children: []
-  m_Father: {fileID: 407914}
+  m_Father: {fileID: 454250}
   m_RootOrder: 1
 --- !u!4 &407920
 Transform:
@@ -134,11 +147,11 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107920}
-  m_LocalRotation: {x: -4.3297803e-17, y: .707106769, z: .707106888, w: -4.32978096e-17}
+  m_LocalRotation: {x: -5.38036599e-16, y: .707106769, z: .707106888, w: -1.12005327e-15}
   m_LocalPosition: {x: -.0454733074, y: 1.03163815, z: .164290488}
   m_LocalScale: {x: 22.0310268, y: 22.95644, z: 25.8892574}
   m_Children: []
-  m_Father: {fileID: 407914}
+  m_Father: {fileID: 454250}
   m_RootOrder: 2
 --- !u!4 &407922
 Transform:
@@ -146,12 +159,28 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 107922}
-  m_LocalRotation: {x: -4.50726878e-17, y: .736092865, z: .676880658, w: -4.14469864e-17}
+  m_LocalRotation: {x: 6.16947035e-16, y: .736092865, z: .676880658, w: -6.49015702e-16}
   m_LocalPosition: {x: -.0474527255, y: 1.66696191, z: .147297859}
-  m_LocalScale: {x: 21.808979, y: 21.8089771, z: 21.8089771}
+  m_LocalScale: {x: 21.808979, y: 21.8089752, z: 21.8089752}
   m_Children: []
-  m_Father: {fileID: 407914}
+  m_Father: {fileID: 454250}
   m_RootOrder: 3
+--- !u!4 &454250
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 154250}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -4.37113883e-08}
+  m_LocalPosition: {x: -.0500000007, y: 0, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 407916}
+  - {fileID: 407918}
+  - {fileID: 407920}
+  - {fileID: 407922}
+  m_Father: {fileID: 407914}
+  m_RootOrder: 0
 --- !u!23 &2307914
 Renderer:
   m_ObjectHideFlags: 1
@@ -273,8 +302,66 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 84
   m_CollisionDetection: 0
+--- !u!82 &8200112
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 107914}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9507914
 Animator:
   serializedVersion: 3
@@ -326,10 +413,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: .5
-  m_Height: 2
+  m_Radius: 1
+  m_Height: 3
   m_Direction: 1
-  m_Center: {x: -.0500000007, y: 1, z: .200000003}
+  m_Center: {x: 0, y: 1, z: -.200000003}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
