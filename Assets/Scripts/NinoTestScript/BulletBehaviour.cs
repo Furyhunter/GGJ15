@@ -46,7 +46,6 @@ public class BulletBehaviour : MonoBehaviour
                 {
                     Instantiate(soundPlayer, transform.position, transform.rotation);
                     soundPlayer.GetComponent<AudioSource>().Play();
-                    GameObject.Destroy(soundPlayer, 0.5f);
                 }
                 GameObject.Destroy(gameObject);
             }

@@ -13718,7 +13718,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   logDebugInfo: 0
   invertYAxis: 0
-  enableXInput: 0
+  enableXInput: 1
   useFixedUpdate: 0
   dontDestroyOnLoad: 0
   customProfiles: []
@@ -65154,7 +65154,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d3b103126731dd4d8a9c24b8247b59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: 1
   player: {fileID: 169174, guid: ce01c9f69f7b36c4f86c5e18afad96f7, type: 2}
   spawnPoints:
   - {fileID: 1521370330}

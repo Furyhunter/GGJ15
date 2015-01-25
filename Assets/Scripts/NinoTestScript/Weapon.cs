@@ -16,6 +16,8 @@ public class Weapon : MonoBehaviour
 	public int ProjSpread; 
 	public float RefireDelay;
     public float PickupDelay;
+    public float RTime;
+    public float RPower;
     public AudioClip shot;
 
 	public AmmoType Ammo;

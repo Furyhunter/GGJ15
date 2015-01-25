@@ -14,6 +14,9 @@ public class Shoot : MonoBehaviour
 
     private InputDevice controller;
 
+    private float rumbleTime = 0;
+    private float rumblePower = 0;
+
     void Start()
     {
         attrs = GetComponent<PlayerAttrs>();
@@ -23,6 +26,7 @@ public class Shoot : MonoBehaviour
     void Update ()
     
     {
+        
         if (fire_delay > 0)
         {
             fire_delay -= Time.deltaTime;
@@ -38,9 +42,10 @@ public class Shoot : MonoBehaviour
                 attrs.ammunition[(int)CurrentWeapon.Ammo]--;
                 CurrentWeapon.GetComponent<AudioSource>().Play();
                 create_shots(CurrentWeapon.Ammunition, CurrentWeapon.ProjCount, CurrentWeapon.ProjSpeed,
-                             CurrentWeapon.ProjSpread, CurrentWeapon.RefireDelay);
+                             CurrentWeapon.ProjSpread, CurrentWeapon.RefireDelay, CurrentWeapon.RTime, CurrentWeapon.RPower);
             }
         }
+        rumblin();
     }
 
     Vector3 get_weapon_spread(int max_degrees_offset)
@@ -50,7 +55,7 @@ public class Shoot : MonoBehaviour
         return new Vector3(x_head, 0.0f, z_head);
     }
 
-    void create_shots(GameObject ammunition, int proj_count, int proj_speed, int proj_spread, float refire_delay)
+    void create_shots(GameObject ammunition, int proj_count, int proj_speed, int proj_spread, float refire_delay, float RTime, float RPower)
     {
         for (int i = proj_count; i > 0; --i)
         {
@@ -58,7 +63,29 @@ public class Shoot : MonoBehaviour
             GameObject new_bullet = (GameObject) Instantiate(ammunition, gameObject.GetComponentInChildren<Weapon>().gameObject.transform.position, Quaternion.identity);
             new_bullet.gameObject.GetComponent<BulletBehaviour>().owner = gameObject;
             new_bullet.GetComponent<Rigidbody>().velocity = proj_head * proj_speed;
+            doRumble(RTime, RPower);
         }
         fire_delay = refire_delay;
+    }
+
+    void doRumble(float time, float intensity)
+    {
+
+        rumbleTime = time;
+        rumblePower = intensity;
+        
+    }
+
+    void rumblin()
+    {
+        if (rumbleTime > 0)
+        {
+            controller.Vibrate(rumblePower);
+            rumbleTime -= Time.deltaTime;
+        }else if(rumbleTime <= 0){
+            rumblePower = 0;
+            controller.Vibrate(0);            
+        }
+
     }
 }
