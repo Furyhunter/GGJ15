@@ -6,6 +6,14 @@ using InControl;
 
 public class PlayerAttrs : MonoBehaviour
 {
+    public enum PlayerColor
+    {
+        RED = 1,
+        BLUE = 2,
+        GREEN = 3,
+        YELLOW = 4
+    };
+
     public int maxHealth = 100;
     public int currentHealth;
     
@@ -18,6 +26,7 @@ public class PlayerAttrs : MonoBehaviour
     AudioSource playerAudio;
     bool isDead;
 
+    public PlayerColor color;
     public InputDevice controller;
 
     public Transform AttachPoint;

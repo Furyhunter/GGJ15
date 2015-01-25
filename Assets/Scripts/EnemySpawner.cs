@@ -6,7 +6,9 @@ public class EnemySpawner : MonoBehaviour
 {
     public GameObject[] enemies;
     public int[] ptValues;
-    public int points;
+    public int minPoints;
+    public int maxPoints;
+    int points;
 
     public Transform[] spawnPoints;
     private int currentSpawnPoint;
@@ -16,6 +18,7 @@ public class EnemySpawner : MonoBehaviour
         if (ptValues.Length != enemies.Length)
             throw new Exception("Not all enemies have assigned point values");
         currentSpawnPoint = 0;
+        points = (int)(UnityEngine.Random.value * (maxPoints - minPoints)) + minPoints;
         Spawn();
     }
 
