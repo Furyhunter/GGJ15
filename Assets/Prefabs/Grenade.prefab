@@ -74,7 +74,7 @@ TrailRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: .5
+  m_Time: .300000012
   m_StartWidth: .25
   m_EndWidth: 1
   m_Colors:

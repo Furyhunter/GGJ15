@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
-  ProjSpeed: 14
+  ProjSpeed: 30
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
