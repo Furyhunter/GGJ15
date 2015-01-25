@@ -14,6 +14,8 @@ public class PlayerAttrs : MonoBehaviour
         YELLOW
     };
 
+    public Material[] colors = new Material[4];
+
     public int maxHealth = 100;
     public int currentHealth;
     
@@ -30,6 +32,7 @@ public class PlayerAttrs : MonoBehaviour
     public InputDevice controller;
 
     public Transform AttachPoint;
+    Projector circle;
 
     void Awake()
     {
@@ -37,6 +40,12 @@ public class PlayerAttrs : MonoBehaviour
         playerAudio = GetComponent<AudioSource>();
         currentHealth = maxHealth;
         controller = InputManager.Devices[(int) color];
+    }
+
+    void Start()
+    {
+        circle = gameObject.GetComponentInChildren<Projector>();
+        circle.material = colors[(int)color];
     }
 
     public void TakeDamage(int amount)
