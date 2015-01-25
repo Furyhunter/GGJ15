@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using UnityEditor;
+using UnityEditor.Callbacks;
 using System.IO;
 using System.Collections.Generic;
 using System;
@@ -54,6 +55,15 @@ public class BuildScript
     public static bool ValidateBuildPlayer()
     {
         return HasPro;
+    }
+
+    [PostProcessBuild]
+    public static void PostProcessAddXInput(BuildTarget target, string path)
+    {
+        if (target == BuildTarget.StandaloneWindows)
+        {
+            File.Copy("XInputInterface.dll", path.Replace("StarshipBravo.exe", "XInputInterface.dll"));
+        }
     }
 
     public static void BuildPlayer(BuildTarget Platform, BuildOptions BuildOptions)

@@ -4,13 +4,12 @@ using System.Collections;
 public class PlayerSpawner : MonoBehaviour
 {
 
-    public int players;
     public GameObject player;
     public Transform[] spawnPoints;
 
 	void Start()
 	{
-	    for(int k = 0; k < players; k++){
+	    for(int k = 0; k < GlobalState.NumberOfPlayers; k++){
             PlayerAttrs attrs = ((GameObject)Instantiate(player, spawnPoints[k].position, spawnPoints[k].rotation)).GetComponent<PlayerAttrs>();
             switch(k)
             {
