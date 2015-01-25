@@ -56,7 +56,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 166808}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 5.04300022, y: 5.82499981, z: -6.94700003}
+  m_LocalPosition: {x: 5.87092209, y: 1.10630047, z: -8.30117035}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 466806}
@@ -114,7 +114,7 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: .200000003, z: .200000003}
+  m_Size: {x: 1, y: .300000012, z: .25}
   m_Center: {x: -.349999994, y: 0, z: .209999993}
 --- !u!65 &6572446
 BoxCollider:
@@ -126,7 +126,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.10000002, y: .400000006, z: .349999994}
+  m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -.349999994, y: 0, z: .209999993}
 --- !u!95 &9566806
 Animator:
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4de89772fe55a5d4aa26e81a4b5889fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Ammunition: {fileID: 110170, guid: baaf98b0ef5e37949a2aa9cd9017b30d, type: 2}
+  Ammunition: {fileID: 156074, guid: 05cbbf4a0c21cf540905602356f90662, type: 2}
   ProjCount: 1
   ProjSpeed: 14
   ProjSpread: 0

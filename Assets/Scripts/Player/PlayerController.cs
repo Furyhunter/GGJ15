@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
     InputDevice device;
     InputControl control;
     public float PlayerSpeed = 1.0f;
+    private float TossDelay = 0.0f;
     CharacterController Mover;
 
     Transform hand;
@@ -20,6 +21,8 @@ public class PlayerController : MonoBehaviour
 
 	void Update()
 	{
+        TossDelay -= Time.deltaTime;
+
        // Debug.Log(device.Name);
         float x = device.LeftStickX;
         float y = device.LeftStickY;
@@ -38,7 +41,7 @@ public class PlayerController : MonoBehaviour
             transform.rotation = Quaternion.LookRotation(InputDirection, Vector3.up);
         }
 
-        if (device.Action4)
+        if (device.Action4 && TossDelay <= 0)
         {
            Transform hand = gameObject.GetComponent<PlayerAttrs>().AttachPoint;
            if (hand.childCount > 0)
@@ -54,6 +57,7 @@ public class PlayerController : MonoBehaviour
                gun.gameObject.rigidbody.AddForce(0, 250, 0);
                gun.gameObject.rigidbody.AddTorque(0, 200000, 0);
                gun.gameObject.rigidbody.detectCollisions = true;
+               TossDelay = 1;
            }
         }
 	}
@@ -61,7 +65,6 @@ public class PlayerController : MonoBehaviour
     void OnTriggerStay(Collider collider)
 
     {
-        Debug.Log(collider.gameObject.tag);
         if (collider.gameObject.tag == "Weapon" && collider.gameObject.GetComponent<Weapon>().PickupDelay <= 0 && hand.childCount < 1)
         {
             collider.rigidbody.isKinematic = true;

@@ -900,7 +900,7 @@ MonoBehaviour:
   currentHealth: 0
   healthSlider: {fileID: 0}
   deathSound: {fileID: 0}
-  ammunition: 00010000000000001700000000000000
+  ammunition: 00010000c80100001700000000000000
   color: 0
   AttachPoint: {fileID: 469194}
 --- !u!136 &13669156
