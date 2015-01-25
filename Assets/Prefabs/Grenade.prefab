@@ -167,7 +167,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletLife: 5
   DestroyOnContact: 1
-  ExplosionRadius: 15
+  ExplosionRadius: 2
   Damage: 20
   owner: {fileID: 0}
   soundPlayer: {fileID: 144190, guid: 981c4f92d2514e54f9b8a568c808e3bc, type: 2}
