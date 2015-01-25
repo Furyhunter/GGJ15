@@ -44,7 +44,7 @@ public class PlayerController : MonoBehaviour
            if (hand.childCount > 0)
            {
                Transform gun = hand.GetChild(0);
-               gun.gameObject.GetComponent<Weapon>().PickupDelay = 3;
+               gun.gameObject.GetComponent<Weapon>().PickupDelay = 1.5f;
                gun.SetParent(null);
                gun.gameObject.rigidbody.isKinematic = false;
                
