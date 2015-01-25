@@ -989,12 +989,12 @@ MonoBehaviour:
   - {fileID: 2100000, guid: 59279012f136da24987597cdf53b6fc8, type: 2}
   - {fileID: 2100000, guid: 1c5d43a1609ff9842b43578caf07e749, type: 2}
   - {fileID: 2100000, guid: 74c5635b259f4f448b86404c51b5a62b, type: 2}
-  maxHealth: 100
+  maxHealth: 150
   currentHealth: 0
   healthSlider: {fileID: 0}
   deathSound: {fileID: 8300000, guid: ea356e52eb2abfb4487079d21a2d5a49, type: 3}
   hitSound: {fileID: 8300000, guid: 8244d72b8540108468042c821e809fbe, type: 3}
-  ammunition: 00010000c80100001700000000000000
+  ammunition: 00000000000000000000000000000000
   color: 0
   AttachPoint: {fileID: 469194}
 --- !u!119 &11933222

@@ -95,7 +95,6 @@ GameObject:
   - 136: {fileID: 13607902}
   - 54: {fileID: 5407902}
   - 114: {fileID: 11407906}
-  - 114: {fileID: 11407904}
   - 114: {fileID: 11407902}
   - 82: {fileID: 8204056}
   m_Layer: 0
@@ -389,20 +388,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3be21487d3a2a8a42b930cc22a09fd24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Damage: 7
---- !u!114 &11407904
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165850}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c98b03b7ade8e6f439d94f50ba0bbb97, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timeBetweenAttacks: .5
-  attackDamage: 10
+  attackDelay: .75
+  Damage: 4
 --- !u!114 &11407906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -414,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f79ee8ec3e949458436b631765a6ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 100
+  maxHealth: 60
   currentHealth: 0
   deathSound: {fileID: 8300000, guid: 019943afa0874574c840af3e78e965b5, type: 3}
 --- !u!136 &13607902
