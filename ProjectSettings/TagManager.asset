@@ -8,6 +8,7 @@ TagManager:
   - Crate
   - Weapon
   - Enemy
+  - Spawner
   - 
   Builtin Layer 0: Default
   Builtin Layer 1: TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   Builtin Layer 7: 
   User Layer 8: pickups
   User Layer 9: players
-  User Layer 10: 
+  User Layer 10: Spawns
   User Layer 11: 
   User Layer 12: 
   User Layer 13: 

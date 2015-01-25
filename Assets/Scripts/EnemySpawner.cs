@@ -8,6 +8,8 @@ public class EnemySpawner : MonoBehaviour
     public int[] ptValues;
     public int minPoints;
     public int maxPoints;
+
+    bool hasSpawned;
     int points;
 
     public Transform[] spawnPoints;
@@ -19,7 +21,7 @@ public class EnemySpawner : MonoBehaviour
             throw new Exception("Not all enemies have assigned point values");
         currentSpawnPoint = 0;
         points = (int)(UnityEngine.Random.value * (maxPoints - minPoints)) + minPoints;
-        Spawn();
+        hasSpawned = false;
     }
 
     void Spawn()
@@ -48,5 +50,14 @@ public class EnemySpawner : MonoBehaviour
         Instantiate(enemies[i], 
             spawnPoints[currentSpawnPoint].position, 
             spawnPoints[currentSpawnPoint].rotation);
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if (!hasSpawned && other.gameObject.tag == "Player")
+        {
+            hasSpawned = true;
+            Spawn();
+        }
     }
 }
