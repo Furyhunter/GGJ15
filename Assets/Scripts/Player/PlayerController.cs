@@ -31,6 +31,7 @@ public class PlayerController : MonoBehaviour
         {
             InputDirection = new Vector3(device.RightStickX * PlayerSpeed, 0,
                  device.RightStickY * PlayerSpeed);
+
             transform.rotation = Quaternion.LookRotation(InputDirection, Vector3.up);
         }
 	}
