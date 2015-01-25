@@ -8,11 +8,11 @@ public class IDIE : MonoBehaviour
 	{
 	
 	}
-	
-	void Update()
-	{
+
+    void Update()
+    {
         if (timeUntilDeath < 0)
             GameObject.Destroy(gameObject);
         timeUntilDeath -= Time.deltaTime;
-	}
+    }
 }
