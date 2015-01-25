@@ -1,21 +1,32 @@
 ﻿using UnityEngine;
 using System.Collections;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class MainMenuController : MonoBehaviour
 {
-    void OpenPlayerDialog()
+    public void OpenPlayerDialog()
     {
         // Modal dialog
         
     }
 
-    void OpenOptionsDialog()
+    public void OpenOptionsDialog()
     {
         // Modal dialog
     }
 
-    void ExitGame()
+    public void ToggleFullscreen()
+    {
+        Screen.fullScreen = !Screen.fullScreen;
+    }
+
+    public void ExitGame()
     {
         Application.Quit();
+#if UNITY_EDITOR
+        EditorApplication.isPlaying = false;
+#endif
     }
 }

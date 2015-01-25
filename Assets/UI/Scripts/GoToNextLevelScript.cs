@@ -4,10 +4,10 @@ using System.Collections;
 public class GoToNextLevelScript : MonoBehaviour
 {
 
-    public int nextLevelIndex = 1;
+    public string nextLevel = "";
 
     void GoToNextLevel()
     {
-        Application.LoadLevel(nextLevelIndex);
+        Application.LoadLevel(nextLevel);
     }
 }
