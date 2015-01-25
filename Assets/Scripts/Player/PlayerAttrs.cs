@@ -8,10 +8,10 @@ public class PlayerAttrs : MonoBehaviour
 {
     public enum PlayerColor
     {
-        RED = 1,
-        BLUE = 2,
-        GREEN = 3,
-        YELLOW = 4
+        RED,
+        BLUE,
+        GREEN,
+        YELLOW
     };
 
     public int maxHealth = 100;
@@ -36,7 +36,7 @@ public class PlayerAttrs : MonoBehaviour
         anim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
         currentHealth = maxHealth;
-        controller = InputManager.ActiveDevice;
+        controller = InputManager.Devices[(int) color];
     }
 
     public void TakeDamage(int amount)
