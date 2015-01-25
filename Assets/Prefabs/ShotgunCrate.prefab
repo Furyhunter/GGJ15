@@ -143,6 +143,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ammunition: 15
   type: 1
+  soundObject: {fileID: 110092, guid: 03052d2df62f83f4f8d34d1bcd93488c, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
