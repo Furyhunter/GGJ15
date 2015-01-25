@@ -29,7 +29,7 @@ public class PlayerController : MonoBehaviour
         y.y = 0;
        Mover.SimpleMove(x + y);
         float Jumblies = Mathf.Max(x.magnitude, y.magnitude);
-       gameObject.GetComponentInChildren<Animator>().SetFloat("Speed", Jumblies);
+       gameObject.GetComponentInChildren<Animator>().SetFloat("Speed", Jumblies/PlayerSpeed);
         x = device.RightStickX * Camera.main.transform.right ;
         y = device.RightStickY * Camera.main.transform.forward ;
         if (x != Vector3.zero || y != Vector3.zero)
