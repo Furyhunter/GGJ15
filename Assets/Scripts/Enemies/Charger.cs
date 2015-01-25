@@ -85,7 +85,7 @@ public class Charger : MonoBehaviour
             Vector3 dist = lastTarget.transform.position - transform.position;
             Vector3 rot = Vector3.RotateTowards(transform.forward, dist, 0.1f, 0);
             transform.rotation = Quaternion.LookRotation(rot);
-            rigidbody.velocity = Vector3.ClampMagnitude(dist, 0.1f) * 500;
+            rigidbody.velocity = Vector3.ClampMagnitude(dist, 0.1f) * 250;
             if (dist.magnitude < 2)
             {
                 rigidbody.velocity = Vector3.zero;
