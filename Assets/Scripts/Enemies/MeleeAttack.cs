@@ -20,29 +20,18 @@ public class MeleeAttack : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        foreach (GameObject p in players)
+        if(other.gameObject.tag == "Player")
         {
-            if (p == other.gameObject)
-            {
-                lastHit = p;
-                playerInRange = true;
-            }
+            lastHit = other.gameObject;
+            playerInRange = true;
         }
-            
     }
 
 
     void OnTriggerExit(Collider other)
     {
-        GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-        foreach (GameObject p in players)
-        {
-            if (p == other.gameObject)
-            {
-                playerInRange = false;
-            }
-        }
+        if(other.gameObject.tag == "Player")
+            playerInRange = false;
     }
 
 
