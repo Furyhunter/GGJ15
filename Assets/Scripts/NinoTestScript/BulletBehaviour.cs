@@ -20,11 +20,15 @@ public class BulletBehaviour : MonoBehaviour
     {
         if (collider.gameObject != owner && collider.gameObject.tag != "Projectile")
         {
-            //do bullet things
-            if (DestroyOnContact)
+            Collider[] hitColliders = Physics.OverlapSphere(transform.position, ExplosionRadius);
+            for (int i = 0; i < hitColliders.Length; ++i)
             {
-              GameObject.Destroy(gameObject, 0.0f);
+                //harm enemies
             }
+                if (DestroyOnContact)
+                {
+                    GameObject.Destroy(gameObject, 0.0f);
+                }
         }
     }
 }

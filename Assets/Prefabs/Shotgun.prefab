@@ -14,6 +14,7 @@ GameObject:
   - 114: {fileID: 11465492}
   - 65: {fileID: 6599752}
   - 65: {fileID: 6599750}
+  - 54: {fileID: 5444414}
   m_Layer: 8
   m_Name: Shotgun
   m_TagString: Weapon
@@ -60,6 +61,21 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 139582}
   m_Mesh: {fileID: 4300000, guid: c324a363d9bec0741a400892a7182d64, type: 3}
+--- !u!54 &5444414
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139582}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 0
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!65 &6599750
 BoxCollider:
   m_ObjectHideFlags: 1

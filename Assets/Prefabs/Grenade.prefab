@@ -1,50 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &110170
+--- !u!1 &156074
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 410170}
-  - 33: {fileID: 3310170}
-  - 136: {fileID: 13610170}
-  - 54: {fileID: 5480162}
-  - 114: {fileID: 11444488}
-  - 96: {fileID: 9663104}
+  - 4: {fileID: 456074}
+  - 33: {fileID: 3356074}
+  - 136: {fileID: 13656074}
+  - 54: {fileID: 5456074}
+  - 114: {fileID: 11456074}
+  - 96: {fileID: 9609638}
   m_Layer: 0
-  m_Name: Pellet
+  m_Name: Grenade
   m_TagString: Projectile
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &410170
+--- !u!4 &456074
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110170}
+  m_GameObject: {fileID: 156074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6.61000013, y: 6.07999992, z: -4.92999983}
   m_LocalScale: {x: .200000003, y: .200000003, z: .200000003}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!33 &3310170
+--- !u!33 &3356074
 MeshFilter:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110170}
+  m_GameObject: {fileID: 156074}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!54 &5480162
+--- !u!54 &5456074
 Rigidbody:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110170}
+  m_GameObject: {fileID: 156074}
   serializedVersion: 2
   m_Mass: 1
   m_Drag: 0
@@ -54,19 +54,19 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 32
   m_CollisionDetection: 0
---- !u!96 &9663104
+--- !u!96 &9609638
 TrailRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110170}
+  m_GameObject: {fileID: 156074}
   m_Enabled: 1
   m_CastShadows: 1
-  m_ReceiveShadows: 1
+  m_ReceiveShadows: 0
   m_LightmapIndex: 255
   m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
   m_Materials:
-  - {fileID: 2100000, guid: 5e1f0148831774c428e0a336127838e1, type: 2}
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
   m_SubsetIndices: 
   m_StaticBatchRoot: {fileID: 0}
   m_UseLightProbes: 0
@@ -74,49 +74,49 @@ TrailRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Time: .0500000007
-  m_StartWidth: .100000001
-  m_EndWidth: .0500000007
+  m_Time: .5
+  m_StartWidth: .25
+  m_EndWidth: 1
   m_Colors:
     m_Color[0]:
       serializedVersion: 2
-      rgba: 4278190335
+      rgba: 4294967295
     m_Color[1]:
       serializedVersion: 2
-      rgba: 4278190335
+      rgba: 4288805375
     m_Color[2]:
       serializedVersion: 2
-      rgba: 4278190333
+      rgba: 4286832127
     m_Color[3]:
       serializedVersion: 2
-      rgba: 4278190335
+      rgba: 4284857343
     m_Color[4]:
       serializedVersion: 2
-      rgba: 255
+      rgba: 2960895
   m_MinVertexDistance: .100000001
-  m_Autodestruct: 0
---- !u!114 &11444488
+  m_Autodestruct: 1
+--- !u!114 &11456074
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110170}
+  m_GameObject: {fileID: 156074}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 77305f1ae0a58a648a47344a58962a57, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BulletLife: 4
+  BulletLife: 5
   DestroyOnContact: 1
-  ExplosionRadius: 0
-  Damage: 4
+  ExplosionRadius: 15
+  Damage: 20
   owner: {fileID: 0}
---- !u!136 &13610170
+--- !u!136 &13656074
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 110170}
+  m_GameObject: {fileID: 156074}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
@@ -133,6 +133,6 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 110170}
+  m_RootGameObject: {fileID: 156074}
   m_IsPrefabParent: 1
   m_IsExploded: 1
