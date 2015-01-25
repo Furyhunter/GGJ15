@@ -191,6 +191,8 @@ MonoBehaviour:
   ProjSpread: 4
   RefireDelay: .0850000009
   PickupDelay: 0
+  RTime: .100000001
+  RPower: .100000001
   shot: {fileID: 8300000, guid: 253133796f668d144841c19bba91f959, type: 3}
   Ammo: 0
 --- !u!1001 &100100000
