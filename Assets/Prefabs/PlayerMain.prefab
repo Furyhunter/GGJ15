@@ -607,7 +607,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 169174}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.83116913, y: 1, z: -7.4201498}
+  m_LocalPosition: {x: 3.82999992, y: 1.59000003, z: -7.42000008}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 469164}
@@ -925,6 +925,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7eec1cef1071efb499bcddc417a41914, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colors:
+  - {fileID: 2100000, guid: c6147b9a3fcc97c4a9e50d31bf978fd8, type: 2}
+  - {fileID: 2100000, guid: 59279012f136da24987597cdf53b6fc8, type: 2}
+  - {fileID: 2100000, guid: 1c5d43a1609ff9842b43578caf07e749, type: 2}
+  - {fileID: 2100000, guid: 74c5635b259f4f448b86404c51b5a62b, type: 2}
   maxHealth: 100
   currentHealth: 0
   healthSlider: {fileID: 0}
@@ -941,15 +946,15 @@ Projector:
   m_Enabled: 1
   serializedVersion: 2
   m_NearClipPlane: .100000001
-  m_FarClipPlane: 100
-  m_FieldOfView: 35
+  m_FarClipPlane: 4
+  m_FieldOfView: 30
   m_AspectRatio: 1
   m_Orthographic: 0
-  m_OrthographicSize: 10
+  m_OrthographicSize: 1
   m_Material: {fileID: 2100000, guid: 40070ab1c02816346ac79298a2b025f3, type: 2}
   m_IgnoreLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 768
 --- !u!136 &13669156
 CapsuleCollider:
   m_ObjectHideFlags: 1

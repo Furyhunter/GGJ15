@@ -108,7 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BulletLife: 4
   DestroyOnContact: 1
-  ExplosionRadius: .100000001
+  ExplosionRadius: .200000003
   Damage: 4
   owner: {fileID: 0}
 --- !u!136 &13610170
