@@ -54,7 +54,7 @@ public class Shoot : MonoBehaviour
         for (int i = proj_count; i > 0; --i)
         {
             Vector3 proj_head = get_weapon_spread(proj_spread);
-            GameObject new_bullet = (GameObject) Instantiate(ammunition, transform.position + new Vector3(0,1,0), Quaternion.identity);
+            GameObject new_bullet = (GameObject) Instantiate(ammunition, gameObject.GetComponentInChildren<Weapon>().gameObject.transform.position, Quaternion.identity);
             new_bullet.gameObject.GetComponent<BulletBehaviour>().owner = gameObject;
             new_bullet.GetComponent<Rigidbody>().velocity = proj_head * proj_speed;
         }
