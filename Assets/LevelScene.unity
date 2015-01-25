@@ -13563,6 +13563,51 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1817644270}
   m_GameObject: {fileID: 320304308}
   m_Mesh: {fileID: 4300000, guid: dbf4eef9466dc00449aa7533b810547b, type: 3}
+--- !u!1 &320569123
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 320569125}
+  - 114: {fileID: 320569124}
+  m_Layer: 0
+  m_Name: InControl
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &320569124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320569123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7b5e8de77c5b4597ae7fbfb49a95e22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  logDebugInfo: 0
+  invertYAxis: 0
+  enableXInput: 0
+  useFixedUpdate: 0
+  dontDestroyOnLoad: 0
+  customProfiles: []
+--- !u!4 &320569125
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 320569123}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
 --- !u!1 &320573156
 GameObject:
   m_ObjectHideFlags: 0
@@ -63805,7 +63850,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4d3b103126731dd4d8a9c24b8247b59e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  players: 4
+  players: 1
   player: {fileID: 169174, guid: ce01c9f69f7b36c4f86c5e18afad96f7, type: 2}
   spawnPoints:
   - {fileID: 1521370330}

@@ -24,21 +24,20 @@ public class PlayerController : MonoBehaviour
         TossDelay -= Time.deltaTime;
 
        // Debug.Log(device.Name);
-        float x = device.LeftStickX;
-        float y = device.LeftStickY;
-       Vector3 InputDirection = new Vector3(x * PlayerSpeed, 0, 
-            y * PlayerSpeed);
-       Mover.SimpleMove(InputDirection);
-        float Jumblies = Mathf.Max(Mathf.Abs(x), Mathf.Abs(y));
+        Vector3 y = device.LeftStickY * Camera.main.transform.forward * PlayerSpeed;
+        Vector3 x = device.LeftStickX * Camera.main.transform.right * PlayerSpeed;
+        x.y = 0;
+        y.y = 0;
+       Mover.SimpleMove(x + y);
+        float Jumblies = Mathf.Max(x.magnitude, y.magnitude);
        gameObject.GetComponentInChildren<Animator>().SetFloat("Speed", Jumblies);
-        x = device.RightStickX;
-        y = device.RightStickY;
-        if (x != 0 && y != 0)
+        x = device.RightStickX * Camera.main.transform.right ;
+        y = device.RightStickY * Camera.main.transform.forward ;
+        if (x != Vector3.zero || y != Vector3.zero)
         {
-            InputDirection = new Vector3(device.RightStickX * PlayerSpeed, 0,
-                 device.RightStickY * PlayerSpeed);
-
-            transform.rotation = Quaternion.LookRotation(InputDirection, Vector3.up);
+            x.y = 0;
+            y.y = 0;
+            transform.rotation = Quaternion.LookRotation(x+y, Vector3.up);
         }
 
         if (device.Action4 && TossDelay <= 0)

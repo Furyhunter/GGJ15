@@ -39,13 +39,13 @@ public class PlayerAttrs : MonoBehaviour
         anim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
         currentHealth = maxHealth;
-        controller = InputManager.Devices[(int) color];
     }
 
     void Start()
     {
         circle = gameObject.GetComponentInChildren<Projector>();
         circle.material = colors[(int)color];
+        controller = InputManager.Devices[(int)color];
     }
 
     public void TakeDamage(int amount)
