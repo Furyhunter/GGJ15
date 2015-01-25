@@ -12,8 +12,8 @@ GameObject:
   - 136: {fileID: 13610170}
   - 54: {fileID: 5480162}
   - 114: {fileID: 11444488}
-  - 198: {fileID: 19897422}
-  - 199: {fileID: 19997422}
+  - 198: {fileID: 19858556}
+  - 199: {fileID: 19958556}
   m_Layer: 0
   m_Name: Pellet
   m_TagString: Projectile
@@ -84,7 +84,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
---- !u!198 &19897422
+--- !u!198 &19858556
 ParticleSystem:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -258,7 +258,7 @@ ParticleSystem:
         rgba: 4294967295
       maxColor:
         serializedVersion: 2
-        rgba: 4282729983
+        rgba: 4278190335
       minMaxState: 0
     startSize:
       scalar: 1
@@ -344,9 +344,9 @@ ParticleSystem:
     randomDirection: 0
   EmissionModule:
     enabled: 1
-    m_Type: 1
+    m_Type: 0
     rate:
-      scalar: 3000
+      scalar: 4000
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -1136,7 +1136,7 @@ ParticleSystem:
     subEmitterCollision1: {fileID: 0}
     subEmitterDeath: {fileID: 0}
     subEmitterDeath1: {fileID: 0}
---- !u!199 &19997422
+--- !u!199 &19958556
 ParticleSystemRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
