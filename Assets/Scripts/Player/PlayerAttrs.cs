@@ -20,6 +20,8 @@ public class PlayerAttrs : MonoBehaviour
 
     public InputDevice controller;
 
+    public Transform AttachPoint;
+
     void Awake()
     {
         anim = GetComponent<Animator>();
