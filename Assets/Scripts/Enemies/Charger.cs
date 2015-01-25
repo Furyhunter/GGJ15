@@ -75,6 +75,7 @@ public class Charger : MonoBehaviour
             if (lastTarget == null)
             {
                 phase = ChargerPhase.PHASE_TARGETING;
+                rigidbody.velocity = Vector3.zero;
                 return;
             }
                 
@@ -82,7 +83,7 @@ public class Charger : MonoBehaviour
             Vector3 rot = Vector3.RotateTowards(transform.forward, dist, 0.1f, 0);
             transform.rotation = Quaternion.LookRotation(rot);
             rigidbody.velocity = Vector3.ClampMagnitude(dist, 0.1f) * 500;
-            if (dist.magnitude < 3)
+            if (dist.magnitude < 2)
             {
                 rigidbody.velocity = Vector3.zero;
                 phase = ChargerPhase.PHASE_TARGETING;
