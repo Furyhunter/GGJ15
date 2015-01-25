@@ -21,6 +21,7 @@ public class PlayerAttrs : MonoBehaviour
     
     public Slider healthSlider;
     public AudioClip deathSound;
+    public AudioClip hitSound;
 
     public int[] ammunition = {0, 0, 0, 0};
 
@@ -38,6 +39,7 @@ public class PlayerAttrs : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         playerAudio = GetComponent<AudioSource>();
+        playerAudio.clip = hitSound;
         currentHealth = maxHealth;
     }
 
@@ -54,7 +56,7 @@ public class PlayerAttrs : MonoBehaviour
 
         //healthSlider.value = currentHealth;
 
-        //playerAudio.Play();
+        playerAudio.Play();
 
         if (currentHealth <= 0 && !isDead)
         {
@@ -69,10 +71,10 @@ public class PlayerAttrs : MonoBehaviour
 
         //anim.SetTrigger("Die");
 
-        //playerAudio.clip = deathSound;
-        //playerAudio.Play();
+        playerAudio.clip = deathSound;
+        playerAudio.Play();
 
-        Destroy(gameObject);
+        Destroy(gameObject,0.5f);
     }
 
     public int getCurrentHealth()

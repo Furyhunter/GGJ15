@@ -18,6 +18,7 @@ public class EnemyAttrs : MonoBehaviour
     {
         anim = GetComponent<Animator>();
         enemyAudio = GetComponent<AudioSource>();
+        enemyAudio.clip = deathSound;
         //collider = GetComponent<CapsuleCollider>();
 
         currentHealth = maxHealth;
@@ -45,9 +46,9 @@ public class EnemyAttrs : MonoBehaviour
     void Death()
     {
         isDead = true;
-
+        enemyAudio.Play();
         //collider.isTrigger = true;
-        Destroy(gameObject);
+        Destroy(gameObject, 0.5f);
     }
 
     public int getCurrentHealth()
