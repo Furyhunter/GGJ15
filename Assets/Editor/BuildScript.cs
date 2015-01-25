@@ -62,7 +62,7 @@ public class BuildScript
     {
         if (target == BuildTarget.StandaloneWindows)
         {
-            File.Copy("XInputInterface.dll", path + "XInputInterface.dll");
+            File.Copy("XInputInterface.dll", path.Replace("StarshipBravo.exe", "XInputInterface.dll"));
         }
     }
 
