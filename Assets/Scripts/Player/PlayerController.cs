@@ -7,12 +7,15 @@ public class PlayerController : MonoBehaviour
     InputDevice device;
     InputControl control;
     public float PlayerSpeed = 1.0f;
-    CharacterController Mover; 
+    CharacterController Mover;
+
+    Transform hand;
     void Start()
     {
         device = gameObject.GetComponent<PlayerAttrs>().controller;
         control = device.GetControl(InputControlType.Action1);
         Mover = gameObject.GetComponent<CharacterController>();
+        hand = gameObject.GetComponent<PlayerAttrs>().AttachPoint;
     }
 
 	void Update()
@@ -34,5 +37,40 @@ public class PlayerController : MonoBehaviour
 
             transform.rotation = Quaternion.LookRotation(InputDirection, Vector3.up);
         }
+
+        if (device.Action4)
+        {
+           Transform hand = gameObject.GetComponent<PlayerAttrs>().AttachPoint;
+           if (hand.childCount > 0)
+           {
+               Transform gun = hand.GetChild(0);
+               gun.gameObject.GetComponent<Weapon>().PickupDelay = 3;
+               gun.SetParent(null);
+               gun.gameObject.rigidbody.isKinematic = false;
+               
+               gun.position += new Vector3(0, 1.5f, 0);
+               gun.gameObject.rigidbody.AddForce(0, 250, 0);
+               gun.gameObject.rigidbody.AddTorque(50, 100, 0);
+               gun.gameObject.rigidbody.detectCollisions = true;
+           }
+        }
 	}
+
+    void OnTriggerEnter(Collider collider)
+
+    {
+        Debug.Log(collider.gameObject.tag);
+        if (collider.gameObject.tag == "Weapon" && collider.gameObject.GetComponent<Weapon>().PickupDelay <= 0 && hand.childCount < 1)
+        {
+            collider.rigidbody.isKinematic = true;
+            collider.rigidbody.detectCollisions = false;
+            collider.transform.SetParent(hand, false);
+            collider.gameObject.transform.localPosition = Vector3.zero;
+            collider.transform.localRotation = Quaternion.identity;
+        }
+        else
+        {
+            Debug.Log(collider.gameObject.tag);
+        }
+    }
 }

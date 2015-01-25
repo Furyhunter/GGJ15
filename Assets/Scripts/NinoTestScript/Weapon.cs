@@ -15,6 +15,14 @@ public class Weapon : MonoBehaviour
 	public int ProjSpeed;
 	public int ProjSpread; 
 	public float RefireDelay;
+    public float PickupDelay;
 
 	public AmmoType Ammo;
+
+    void Update()
+    {
+        if (PickupDelay > 0)
+            PickupDelay -= Time.deltaTime;
+    }
+
 }
