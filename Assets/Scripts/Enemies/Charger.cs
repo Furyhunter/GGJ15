@@ -17,6 +17,8 @@ public class Charger : MonoBehaviour
     GameObject lastTarget = null;
     ChargerPhase phase;
     float timer;
+    public float attackDelay = 0.5f;
+    float attackTimer;
     Animator anim;
     GameObject selection;
     public int Damage = 7;
@@ -27,6 +29,7 @@ public class Charger : MonoBehaviour
         phase = ChargerPhase.PHASE_TARGETING;
         anim = GetComponent<Animator>();
         timer = 0f;
+        attackTimer = 0f;
 	}
 	
 	void Update()
@@ -66,10 +69,6 @@ public class Charger : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= 1.0)
             {
-                if (lastTarget != null && Vector3.Distance(lastTarget.transform.position, transform.position) < 2)
-                {
-                    lastTarget.GetComponent<PlayerAttrs>().TakeDamage(Damage);
-                }
                 timer = 0f;
                 phase = ChargerPhase.PHASE_CHARGING;
             }
@@ -92,6 +91,16 @@ public class Charger : MonoBehaviour
                 rigidbody.velocity = Vector3.zero;
                 phase = ChargerPhase.PHASE_TARGETING;
             }
+        }
+
+        attackTimer += Time.deltaTime;
+
+        if (lastTarget != null && 
+            Vector3.Distance(lastTarget.transform.position, transform.position) < 2 &&
+            attackTimer >= attackDelay)
+        {
+            lastTarget.GetComponent<PlayerAttrs>().TakeDamage(Damage);
+            attackTimer = 0f;
         }
 	}
 
