@@ -9,6 +9,8 @@ public class BulletBehaviour : MonoBehaviour
     public int Damage = 4;
     public GameObject owner = null;
 
+    public GameObject soundPlayer;
+
     void Update()
     {
         if (BulletLife < 0)
@@ -18,7 +20,7 @@ public class BulletBehaviour : MonoBehaviour
 
     void OnTriggerEnter(Collider collider)
     {
-        if (collider.gameObject != owner && collider.gameObject.tag != "Projectile")
+        if (collider.gameObject != owner)
         {
             if (ExplosionRadius > 0)
             {
@@ -40,7 +42,13 @@ public class BulletBehaviour : MonoBehaviour
                 
             if (DestroyOnContact)
             {
-                GameObject.Destroy(gameObject, 0.0f);
+                if (soundPlayer != null && soundPlayer.GetComponent<AudioSource>() != null)
+                {
+                    Instantiate(soundPlayer, transform.position, transform.rotation);
+                    soundPlayer.GetComponent<AudioSource>().Play();
+                    GameObject.Destroy(soundPlayer, 0.5f);
+                }
+                GameObject.Destroy(gameObject);
             }
         }
     }

@@ -16,8 +16,14 @@ public class Weapon : MonoBehaviour
 	public int ProjSpread; 
 	public float RefireDelay;
     public float PickupDelay;
+    public AudioClip shot;
 
 	public AmmoType Ammo;
+
+    void Start()
+    {
+        gameObject.GetComponent<AudioSource>().clip = shot;
+    }
 
     void Update()
     {

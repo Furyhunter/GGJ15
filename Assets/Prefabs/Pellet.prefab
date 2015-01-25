@@ -13,7 +13,7 @@ GameObject:
   - 54: {fileID: 5480162}
   - 114: {fileID: 11444488}
   - 96: {fileID: 9663104}
-  m_Layer: 0
+  m_Layer: 11
   m_Name: Pellet
   m_TagString: Projectile
   m_Icon: {fileID: 0}
@@ -53,7 +53,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 32
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!96 &9663104
 TrailRenderer:
   m_ObjectHideFlags: 1

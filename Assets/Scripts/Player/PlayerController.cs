@@ -14,7 +14,6 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         device = gameObject.GetComponent<PlayerAttrs>().controller;
-        control = device.GetControl(InputControlType.Action1);
         Mover = gameObject.GetComponent<CharacterController>();
         hand = gameObject.GetComponent<PlayerAttrs>().AttachPoint;
     }

@@ -15,6 +15,7 @@ GameObject:
   - 65: {fileID: 6599752}
   - 65: {fileID: 6599750}
   - 54: {fileID: 5444414}
+  - 82: {fileID: 8281100}
   m_Layer: 8
   m_Name: Shotgun
   m_TagString: Weapon
@@ -100,6 +101,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: .911572695, y: .15827176, z: .251894623}
   m_Center: {x: -.203567728, y: 0, z: -.0299066156}
+--- !u!82 &8281100
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 139582}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 2
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: .00200000009
+      value: 1
+      inSlope: 0
+      outSlope: -1.00200403
+      tangentMode: 0
+    - time: 1
+      value: .692052901
+      inSlope: -1.00200403
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9539582
 Animator:
   serializedVersion: 3
@@ -132,6 +191,7 @@ MonoBehaviour:
   ProjSpread: 16
   RefireDelay: 1
   PickupDelay: 0
+  shot: {fileID: 8300000, guid: 2e3fc1e2119d94e44a15cf572a4e8312, type: 3}
   Ammo: 1
 --- !u!1001 &100100000
 Prefab:

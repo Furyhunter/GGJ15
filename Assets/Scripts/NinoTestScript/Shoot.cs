@@ -36,6 +36,7 @@ public class Shoot : MonoBehaviour
             else
             {
                 attrs.ammunition[(int)CurrentWeapon.Ammo]--;
+                CurrentWeapon.GetComponent<AudioSource>().Play();
                 create_shots(CurrentWeapon.Ammunition, CurrentWeapon.ProjCount, CurrentWeapon.ProjSpeed,
                              CurrentWeapon.ProjSpread, CurrentWeapon.RefireDelay);
             }

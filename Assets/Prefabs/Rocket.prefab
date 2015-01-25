@@ -30,6 +30,7 @@ GameObject:
   - 54: {fileID: 5466806}
   - 65: {fileID: 6566806}
   - 65: {fileID: 6572446}
+  - 82: {fileID: 8232762}
   m_Layer: 8
   m_Name: Rocket
   m_TagString: Weapon
@@ -128,6 +129,64 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: -.349999994, y: 0, z: .209999993}
+--- !u!82 &8232762
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 166808}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
 --- !u!95 &9566806
 Animator:
   serializedVersion: 3
@@ -160,6 +219,7 @@ MonoBehaviour:
   ProjSpread: 0
   RefireDelay: 1.75
   PickupDelay: 0
+  shot: {fileID: 8300000, guid: 27c8175c424a9a64b8f4ac57475bbf65, type: 3}
   Ammo: 2
 --- !u!1001 &100100000
 Prefab:
