@@ -160,6 +160,8 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   deathSound: {fileID: 0}
   ammunition: 00000000000000000000000000000000
+  color: 0
+  AttachPoint: {fileID: 0}
 --- !u!1 &228855272
 GameObject:
   m_ObjectHideFlags: 0
@@ -363,6 +365,8 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   deathSound: {fileID: 0}
   ammunition: 00000000000000000000000000000000
+  color: 0
+  AttachPoint: {fileID: 0}
 --- !u!1 &1270382544
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +453,8 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   deathSound: {fileID: 0}
   ammunition: 00000000000000000000000000000000
+  color: 0
+  AttachPoint: {fileID: 0}
 --- !u!1 &1327734206
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,7 +569,8 @@ MonoBehaviour:
   enemies:
   - {fileID: 165850, guid: 513d19551bbfbb34dad56b8f14a5f927, type: 2}
   ptValues: 01000000
-  points: 3
+  minPoints: 1
+  maxPoints: 1
   spawnPoints:
   - {fileID: 298320467}
   - {fileID: 604508851}
@@ -615,6 +622,8 @@ MonoBehaviour:
   healthSlider: {fileID: 0}
   deathSound: {fileID: 0}
   ammunition: 140000000a0000000500000000000000
+  color: 0
+  AttachPoint: {fileID: 0}
 --- !u!23 &1995796676
 Renderer:
   m_ObjectHideFlags: 0
@@ -677,4 +686,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f4878f71613780498b2f61e29eb29d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  CurrentWeapon: {fileID: 11405404, guid: df8425106da4e0740987c6b46cf62e0c, type: 2}
+  CurrentWeapon: {fileID: 0}
