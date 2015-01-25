@@ -7,7 +7,7 @@ fi
 
 SCRIPT_DIR=$(cd "${0%/*}" && pwd)
 
-SCRIPTS=(pre-commit post-checkout post-merge)
+SCRIPTS=(pre-commit)
 
 for SCRIPT in "${SCRIPTS[@]}"; do
     ln -snf "$SCRIPT_DIR/$SCRIPT" ".git/hooks/$SCRIPT"
