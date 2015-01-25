@@ -1,37 +1,14 @@
 fileFormatVersion: 2
-guid: f008dc8cd3fee6d45b82653417aa3231
+guid: dbf4eef9466dc00449aa7533b810547b
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
-    100000: Floor
-    100002: //RootNode
-    100004: FloorNearWallStep_E
-    100006: FloorNearWallStep_N
-    100008: FloorNearWallStep_S
-    100010: FloorNearWallStep_W
-    400000: Floor
-    400002: //RootNode
-    400004: FloorNearWallStep_E
-    400006: FloorNearWallStep_N
-    400008: FloorNearWallStep_S
-    400010: FloorNearWallStep_W
-    2300000: Floor
-    2300002: FloorNearWallStep_E
-    2300004: FloorNearWallStep_N
-    2300006: FloorNearWallStep_S
-    2300008: FloorNearWallStep_W
-    3300000: Floor
-    3300002: FloorNearWallStep_E
-    3300004: FloorNearWallStep_N
-    3300006: FloorNearWallStep_S
-    3300008: FloorNearWallStep_W
-    4300000: FloorNearWallStep_N
-    4300002: Floor
-    6400000: Floor
-    6400002: FloorNearWallStep_E
-    6400004: FloorNearWallStep_N
-    6400006: FloorNearWallStep_S
-    6400008: FloorNearWallStep_W
+    100000: //RootNode
+    400000: //RootNode
+    2300000: //RootNode
+    3300000: //RootNode
+    4300000: Wall_1x2
+    6400000: //RootNode
     9500000: //RootNode
   materials:
     importMaterials: 1
