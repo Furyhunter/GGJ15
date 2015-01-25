@@ -40,6 +40,12 @@ public class PlayerSpawner : MonoBehaviour
 	
 	void Update()
 	{
-	
+        var player = FindObjectOfType<PlayerAttrs>();
+
+        if (player == null)
+        {
+            Debug.Log("All players dead");
+            Application.LoadLevel("MainMenu");
+        }
 	}
 }

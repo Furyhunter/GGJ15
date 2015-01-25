@@ -15,6 +15,14 @@ public class GameHUD : MonoBehaviour
 
     //private Color[] Colors = {Color.red, Color.blue, Color.green, Color.yellow};
 
+    public int MaxHealth
+    {
+        get
+        {
+            return Player.GetComponent<PlayerAttrs>().maxHealth;
+        }
+    }
+
     public int Health{
         get
         {
@@ -105,7 +113,7 @@ public class GameHUD : MonoBehaviour
             enabled = false;
             return;
         }
-        healthSlider.value = Health;
+        healthSlider.value = ((float)Health/(float)MaxHealth);
         AmmoOfCurrentGun.text = "" + (HasWeapon ? currentGunAmmo : 0);
         Ammunition[0].text = "" + RifleAmmo; //RifleAmmo is 0
         Ammunition[1].text = "" + ShotgunAmmo; //Shotgun is 1
