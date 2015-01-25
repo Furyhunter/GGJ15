@@ -4,7 +4,7 @@ using System.Collections;
 public class EnemyAttrs : MonoBehaviour
 {
     public int maxHealth = 100;
-    private int currentHealth;
+    public int currentHealth;
     public AudioClip deathSound;
 
     Animator anim;

@@ -19,6 +19,8 @@ public class Charger : MonoBehaviour
     ChargerPhase phase;
     float timer;
     Animator anim;
+    GameObject selection;
+    int Damage = 7;
 
 	void Start()
 	{
@@ -33,7 +35,6 @@ public class Charger : MonoBehaviour
         if (phase == ChargerPhase.PHASE_TARGETING)
         {
             GameObject[] players = GameObject.FindGameObjectsWithTag("Player");
-            GameObject selection;
 
             if (players.Length == 0)
                 return;
@@ -66,6 +67,12 @@ public class Charger : MonoBehaviour
             timer += Time.deltaTime;
             if (timer >= 1.0)
             {
+                Collider[] hit = Physics.OverlapSphere(transform.InverseTransformPoint(transform.localPosition + new Vector3(0,0,1)), 1, 9);
+                Debug.DrawLine(transform.position + transform.TransformDirection(Vector3.forward), transform.position, Color.red, 1.0f);
+                foreach (Collider e in hit)
+                {
+                    e.GetComponent<PlayerAttrs>().TakeDamage(Damage);
+                }
                 timer = 0f;
                 phase = ChargerPhase.PHASE_CHARGING;
             }
