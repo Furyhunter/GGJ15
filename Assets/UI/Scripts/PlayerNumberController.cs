@@ -16,7 +16,7 @@ public class PlayerNumberController : MonoBehaviour
     public Text ControllerWarningText;
 
     private int waitFrames = 5;
-    private bool lateSelect = false;
+    private bool lateSelect = true;
 
     void Awake()
     {
