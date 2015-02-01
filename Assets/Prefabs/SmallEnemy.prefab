@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDelay: .75
-  Damage: 4
+  Damage: 3
 --- !u!114 &11407906
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -401,7 +401,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 74f79ee8ec3e949458436b631765a6ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 60
+  maxHealth: 40
   currentHealth: 0
   deathSound: {fileID: 8300000, guid: 019943afa0874574c840af3e78e965b5, type: 3}
 --- !u!136 &13607902
