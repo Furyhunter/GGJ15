@@ -104,12 +104,14 @@ public class GameHUD : MonoBehaviour
         if (Player == null)
         {
             Debug.Log("Player is dead, disabling hud object", this);
+            Destroy(gameObject);
             enabled = false;
             return;
         }
         if (Player.GetComponent<PlayerAttrs>() == null)
         {
             Debug.Log("Playerattrs missing, disabling hud object", this);
+            Destroy(gameObject);
             enabled = false;
             return;
         }
