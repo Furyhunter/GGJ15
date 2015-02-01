@@ -45,7 +45,7 @@ public class PlayerSpawner : MonoBehaviour
         if (player == null)
         {
             Debug.Log("All players dead");
-            Application.LoadLevel("MainMenu");
+            Application.LoadLevel("LoseScene");
         }
 	}
 }

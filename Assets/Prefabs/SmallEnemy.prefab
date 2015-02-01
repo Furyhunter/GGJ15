@@ -389,7 +389,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attackDelay: .75
-  Damage: 3
+  Damage: 4
 --- !u!114 &11407906
 MonoBehaviour:
   m_ObjectHideFlags: 1
