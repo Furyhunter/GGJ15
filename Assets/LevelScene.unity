@@ -18085,6 +18085,8 @@ MonoBehaviour:
   ptValues: 01000000
   minPoints: 1
   maxPoints: 3
+  maxDifficulty: 4
+  round: 1
   spawnPoints:
   - {fileID: 1150147543}
   - {fileID: 371704560}
@@ -25469,6 +25471,8 @@ MonoBehaviour:
   ptValues: 01000000
   minPoints: 1
   maxPoints: 3
+  maxDifficulty: 4
+  round: 1
   spawnPoints:
   - {fileID: 2086045074}
   - {fileID: 810634443}
@@ -34242,7 +34246,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -100, y: 4.25}
+  m_AnchoredPosition: {x: 100, y: 4.25}
   m_SizeDelta: {x: 43, y: 42}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &740752241
@@ -37184,7 +37188,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -100, y: 4.25}
+  m_AnchoredPosition: {x: 100, y: 4.25}
   m_SizeDelta: {x: 43, y: 42}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &811169759
@@ -53278,6 +53282,8 @@ MonoBehaviour:
   ptValues: 01000000
   minPoints: 1
   maxPoints: 3
+  maxDifficulty: 4
+  round: 1
   spawnPoints:
   - {fileID: 1036305408}
   - {fileID: 1169537913}
@@ -56877,6 +56883,8 @@ MonoBehaviour:
   ptValues: 01000000
   minPoints: 1
   maxPoints: 3
+  maxDifficulty: 4
+  round: 1
   spawnPoints:
   - {fileID: 57933121}
   - {fileID: 1871696727}
@@ -62065,6 +62073,8 @@ MonoBehaviour:
   ptValues: 01000000
   minPoints: 2
   maxPoints: 4
+  maxDifficulty: 4
+  round: 1
   spawnPoints:
   - {fileID: 1442798564}
   - {fileID: 315515066}
@@ -62098,6 +62108,8 @@ MonoBehaviour:
   ptValues: 01000000
   minPoints: 1
   maxPoints: 1
+  maxDifficulty: 2
+  round: 0
   spawnPoints:
   - {fileID: 1094075846}
 --- !u!1 &1389911121
@@ -63063,6 +63075,8 @@ MonoBehaviour:
   ptValues: 01000000
   minPoints: 1
   maxPoints: 3
+  maxDifficulty: 4
+  round: 1
   spawnPoints:
   - {fileID: 1873547702}
   - {fileID: 1391172821}
@@ -63212,6 +63226,8 @@ MonoBehaviour:
   ptValues: 01000000
   minPoints: 1
   maxPoints: 3
+  maxDifficulty: 4
+  round: 1
   spawnPoints:
   - {fileID: 2081317652}
   - {fileID: 1259614045}
@@ -69999,6 +70015,8 @@ MonoBehaviour:
   ptValues: 01000000
   minPoints: 1
   maxPoints: 3
+  maxDifficulty: 4
+  round: 1
   spawnPoints:
   - {fileID: 1852177249}
   - {fileID: 348183186}
@@ -81830,7 +81848,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 100, y: 4.25}
+  m_AnchoredPosition: {x: -100, y: 4.25}
   m_SizeDelta: {x: 43, y: 42}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1824228746
@@ -84837,6 +84855,8 @@ MonoBehaviour:
   ptValues: 01000000
   minPoints: 1
   maxPoints: 3
+  maxDifficulty: 4
+  round: 1
   spawnPoints:
   - {fileID: 1961828015}
   - {fileID: 1615442140}
@@ -88043,7 +88063,7 @@ RectTransform:
   m_RootOrder: 2
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 100, y: 4.25}
+  m_AnchoredPosition: {x: -100, y: 4.25}
   m_SizeDelta: {x: 43, y: 42}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &1987966632
@@ -91503,6 +91523,8 @@ MonoBehaviour:
   ptValues: 01000000
   minPoints: 1
   maxPoints: 3
+  maxDifficulty: 4
+  round: 1
   spawnPoints:
   - {fileID: 141698646}
   - {fileID: 3822667}
