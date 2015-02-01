@@ -9,8 +9,12 @@ public class EnemySpawner : MonoBehaviour
     public int minPoints;
     public int maxPoints;
 
+    double difficulty = 1;
+    public int maxDifficulty = 4;
+
     bool hasSpawned;
     int points;
+    public bool round = true;
 
     public Transform[] spawnPoints;
     private int currentSpawnPoint;
@@ -20,6 +24,12 @@ public class EnemySpawner : MonoBehaviour
         if (ptValues.Length != enemies.Length)
             throw new Exception("Not all enemies have assigned point values");
         currentSpawnPoint = 0;
+        difficulty = 1 + (0.75 * (GlobalState.NumberOfPlayers - 1));
+        difficulty = maxDifficulty < difficulty ? maxDifficulty : difficulty;
+
+        maxPoints = round ? (int)Math.Round(maxPoints * difficulty) : (int)(maxPoints * difficulty);
+        minPoints = round ? (int)Math.Round(minPoints * difficulty) : (int)(minPoints * difficulty);
+
         points = (int)(UnityEngine.Random.value * (maxPoints - minPoints)) + minPoints;
         hasSpawned = false;
     }

@@ -5,6 +5,6 @@ public class BossOnDestroy : MonoBehaviour
 {
     void OnDestroy()
     {
-        Application.LoadLevel("MainMenu");
+        Application.LoadLevel("LoseScene");
     }
 }
