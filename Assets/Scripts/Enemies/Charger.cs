@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 using System;
 
 public class Charger : MonoBehaviour
@@ -22,6 +23,14 @@ public class Charger : MonoBehaviour
     Animator anim;
     GameObject selection;
     public int Damage = 7;
+
+    class RaycastHitDistanceComparer : IComparer<RaycastHit>
+    {
+        public int Compare(RaycastHit x, RaycastHit y)
+        {
+            return Mathf.RoundToInt(x.distance - y.distance);
+        }
+    }
 
 	void Start()
 	{
@@ -81,9 +90,33 @@ public class Charger : MonoBehaviour
                 rigidbody.velocity = Vector3.zero;
                 return;
             }
-                
-            Vector3 dist = lastTarget.transform.position - transform.position;
+            Vector3 dist = lastTarget.transform.position + new Vector3(0, 1, 0) - transform.position + new Vector3(0, 1, 0);
             Vector3 rot = Vector3.RotateTowards(transform.forward, dist, 0.1f, 0);
+
+            // check to make sure we don't collide with the scene
+            RaycastHit[] hits;
+            Ray ray = new Ray(transform.position + new Vector3(0, 1, 0), rot);
+            hits = Physics.RaycastAll(ray, dist.magnitude);
+            Array.Sort<RaycastHit>(hits, new RaycastHitDistanceComparer());
+            foreach (var hit in hits)
+            {
+                if (hit.transform == transform)
+                {
+                    continue;
+                }
+                if (hit.transform.gameObject.tag == "Enemy")
+                {
+                    continue;
+                }
+                if (hit.transform.gameObject.tag != "Player")
+                {
+                    // raycast collided
+                    phase = ChargerPhase.PHASE_TARGETING;
+                    rigidbody.velocity = Vector3.zero;
+                    return;
+                }
+            }
+                
             transform.rotation = Quaternion.LookRotation(rot);
             rigidbody.velocity = Vector3.ClampMagnitude(dist, 0.1f) * 250;
             if (dist.magnitude < 2)

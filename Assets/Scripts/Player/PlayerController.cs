@@ -73,9 +73,5 @@ public class PlayerController : MonoBehaviour
 
             gameObject.GetComponent<Shoot>().CurrentWeapon = collider.gameObject.GetComponent<Weapon>();
         }
-        else
-        {
-            Debug.Log(collider.gameObject.tag);
-        }
     }
 }
