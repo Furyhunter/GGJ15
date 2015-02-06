@@ -10,6 +10,7 @@ GameObject:
   - 4: {fileID: 437684}
   - 198: {fileID: 19837684}
   - 199: {fileID: 19937684}
+  - 114: {fileID: 11480124}
   m_Layer: 0
   m_Name: BloodParticles
   m_TagString: Untagged
@@ -24,11 +25,22 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 137684}
   m_LocalRotation: {x: -.707106829, y: 0, z: 0, w: .707106829}
-  m_LocalPosition: {x: -1.46678066, y: 2.03908396, z: -.130955577}
+  m_LocalPosition: {x: 7.57699728, y: 3.63561639e-07, z: .748146534}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &11480124
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 137684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe534bd08e4646b4685e6a6913ca41a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!198 &19837684
 ParticleSystem:
   m_ObjectHideFlags: 1
