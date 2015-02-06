@@ -83,6 +83,8 @@ public class PlayerAttrs : MonoBehaviour
         playerAudio.clip = deathSound;
         playerAudio.Play();
 
+        controller.Vibrate(0, 0);
+
         Destroy(gameObject,0.5f);
     }
 
