@@ -115,6 +115,12 @@ namespace InControl
 			OnDeviceAttached = null;
 			OnDeviceDetached = null;
 
+            // Go ahead and reset every controller's Rumble state to 0
+            foreach (var device in devices)
+            {
+                device.Vibrate(0, 0);
+            }
+
 			inputDeviceManagers.Clear();
 			devices.Clear();
 			activeDevice = InputDevice.Null;
