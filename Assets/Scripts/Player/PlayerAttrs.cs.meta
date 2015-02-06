@@ -2,7 +2,13 @@ fileFormatVersion: 2
 guid: 7eec1cef1071efb499bcddc417a41914
 MonoImporter:
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - healthSlider: {instanceID: 0}
+  - deathSound: {instanceID: 0}
+  - hitSound: {instanceID: 0}
+  - AttachPoint: {instanceID: 0}
+  - BloodParticlePrefab: {fileID: 137684, guid: 81ac099e064006c458f0265ccdc3be28,
+      type: 2}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

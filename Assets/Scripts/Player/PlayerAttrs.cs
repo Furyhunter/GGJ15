@@ -33,6 +33,8 @@ public class PlayerAttrs : MonoBehaviour
     public InputDevice controller;
 
     public Transform AttachPoint;
+    public GameObject BloodParticlePrefab;
+
     Projector circle;
 
     void Awake()
@@ -57,6 +59,13 @@ public class PlayerAttrs : MonoBehaviour
         //healthSlider.value = currentHealth;
 
         playerAudio.Play();
+
+        // Instantiate blood
+        if (BloodParticlePrefab != null)
+        {
+            var blood = (GameObject)Instantiate(BloodParticlePrefab);
+            blood.transform.position = transform.position + new Vector3(0, 1f, 0);
+        }
 
         if (currentHealth <= 0 && !isDead)
         {

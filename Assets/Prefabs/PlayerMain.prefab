@@ -997,6 +997,7 @@ MonoBehaviour:
   ammunition: 00000000000000000000000000000000
   color: 0
   AttachPoint: {fileID: 469194}
+  BloodParticlePrefab: {fileID: 137684, guid: 81ac099e064006c458f0265ccdc3be28, type: 2}
 --- !u!119 &11933222
 Projector:
   m_ObjectHideFlags: 1
