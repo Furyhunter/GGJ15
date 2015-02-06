@@ -10,7 +10,7 @@ public class AmmoCrate : MonoBehaviour
 
     public void Start()
     {
-        double mult = 1 + 0.2 * (GlobalState.NumberOfPlayers - 1);
+        double mult = 1 + 0.15 * (GlobalState.NumberOfPlayers - 1);
         ammunition = (int)(Math.Round(ammunition * mult));
     }
 

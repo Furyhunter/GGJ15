@@ -141,7 +141,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d8146993f3da7e45a60bd902968d95e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ammunition: 15
+  ammunition: 10
   type: 1
   soundObject: {fileID: 110092, guid: 03052d2df62f83f4f8d34d1bcd93488c, type: 2}
 --- !u!1001 &100100000
