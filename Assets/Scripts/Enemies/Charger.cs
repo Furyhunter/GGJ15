@@ -87,7 +87,7 @@ public class Charger : MonoBehaviour
             if (lastTarget == null)
             {
                 phase = ChargerPhase.PHASE_TARGETING;
-                rigidbody.velocity = Vector3.zero;
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
                 return;
             }
             Vector3 dist = lastTarget.transform.position + new Vector3(0, 1, 0) - transform.position + new Vector3(0, 1, 0);
@@ -112,16 +112,16 @@ public class Charger : MonoBehaviour
                 {
                     // raycast collided
                     phase = ChargerPhase.PHASE_TARGETING;
-                    rigidbody.velocity = Vector3.zero;
+                    GetComponent<Rigidbody>().velocity = Vector3.zero;
                     return;
                 }
             }
                 
             transform.rotation = Quaternion.LookRotation(rot);
-            rigidbody.velocity = Vector3.ClampMagnitude(dist, 0.1f) * 250;
+            GetComponent<Rigidbody>().velocity = Vector3.ClampMagnitude(dist, 0.1f) * 250;
             if (dist.magnitude < 2)
             {
-                rigidbody.velocity = Vector3.zero;
+                GetComponent<Rigidbody>().velocity = Vector3.zero;
                 phase = ChargerPhase.PHASE_TARGETING;
             }
         }

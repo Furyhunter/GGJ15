@@ -49,12 +49,12 @@ public class PlayerController : MonoBehaviour
                Transform gun = hand.GetChild(0);
                gun.gameObject.GetComponent<Weapon>().PickupDelay = 2f;
                gun.SetParent(null);
-               gun.gameObject.rigidbody.isKinematic = false;
+               gun.gameObject.GetComponent<Rigidbody>().isKinematic = false;
                
                gun.position += new Vector3(0, 1.5f, 0);
-               gun.gameObject.rigidbody.AddForce(0, 250, 0);
-               gun.gameObject.rigidbody.AddTorque(0, 200000, 0);
-               gun.gameObject.rigidbody.detectCollisions = true;
+               gun.gameObject.GetComponent<Rigidbody>().AddForce(0, 250, 0);
+               gun.gameObject.GetComponent<Rigidbody>().AddTorque(0, 200000, 0);
+               gun.gameObject.GetComponent<Rigidbody>().detectCollisions = true;
                TossDelay = 1;
            }
         }
@@ -65,8 +65,8 @@ public class PlayerController : MonoBehaviour
     {
         if (collider.gameObject.tag == "Weapon" && collider.gameObject.GetComponent<Weapon>().PickupDelay <= 0 && hand.childCount < 1)
         {
-            collider.rigidbody.isKinematic = true;
-            collider.rigidbody.detectCollisions = false;
+            collider.GetComponent<Rigidbody>().isKinematic = true;
+            collider.GetComponent<Rigidbody>().detectCollisions = false;
             collider.transform.SetParent(hand, false);
             collider.gameObject.transform.localPosition = Vector3.zero;
             collider.transform.localRotation = Quaternion.identity;

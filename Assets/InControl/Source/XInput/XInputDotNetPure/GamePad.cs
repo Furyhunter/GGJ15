@@ -7,14 +7,50 @@ namespace XInputDotNetPure
 {
 	class Imports
 	{
-		internal const string DLLName = "XInputInterface";
+        public static uint XInputGamePadGetState(uint playerIndex, IntPtr state)
+        {
+            if (IntPtr.Size == 8)
+            {
+                return Imports64.XInputGamePadGetState(playerIndex, state);
+            }
+            else
+            {
+                return Imports32.XInputGamePadGetState(playerIndex, state);
+            }
+        }
 
-		[DllImport( DLLName )]
-		public static extern uint XInputGamePadGetState( uint playerIndex, IntPtr state );
-		[DllImport( DLLName )]
-		public static extern void XInputGamePadSetState( uint playerIndex, float leftMotor, float rightMotor );
-	}
+        public static void XInputGamePadSetState(uint playerIndex, float leftMotor, float rightMotor)
+        {
+            if (IntPtr.Size == 8)
+            {
+                Imports64.XInputGamePadSetState(playerIndex, leftMotor, rightMotor);
+            }
+            else
+            {
+                Imports32.XInputGamePadSetState(playerIndex, leftMotor, rightMotor);
+            }
+        }
+    }
 
+    class Imports32
+    {
+        internal const string DLLName32 = "XInputInterface";
+
+        [DllImport(DLLName32)]
+        public static extern uint XInputGamePadGetState(uint playerIndex, IntPtr state);
+        [DllImport(DLLName32)]
+        public static extern void XInputGamePadSetState(uint playerIndex, float leftMotor, float rightMotor);
+    }
+
+    class Imports64
+    {
+        internal const string DLLName64 = "XInputInterface_64";
+
+        [DllImport(DLLName64)]
+        public static extern uint XInputGamePadGetState(uint playerIndex, IntPtr state);
+        [DllImport(DLLName64)]
+        public static extern void XInputGamePadSetState(uint playerIndex, float leftMotor, float rightMotor);
+    }
 
 	public enum ButtonState
 	{
