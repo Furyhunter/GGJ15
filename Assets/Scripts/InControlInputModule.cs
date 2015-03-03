@@ -195,10 +195,10 @@ public class InControlInputModule : PointerInputModule
             return false;
 
         var data = GetBaseEventData();
-        if (ActiveDevice.GetControl(m_SubmitControl).IsPressed)
+        if (ActiveDevice.GetControl(m_SubmitControl).WasPressed)
             ExecuteEvents.Execute(eventSystem.currentSelectedGameObject, data, ExecuteEvents.submitHandler);
 
-        if (ActiveDevice.GetControl(m_CancelControl).IsPressed)
+        if (ActiveDevice.GetControl(m_CancelControl).WasPressed)
             ExecuteEvents.Execute(eventSystem.currentSelectedGameObject, data, ExecuteEvents.cancelHandler);
         return data.used;
     }
