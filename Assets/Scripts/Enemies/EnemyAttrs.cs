@@ -6,6 +6,7 @@ public class EnemyAttrs : MonoBehaviour
     public int maxHealth = 100;
     public int currentHealth;
     public AudioClip deathSound;
+    public GameObject HurtObject;
 
     Animator anim;
     AudioSource enemyAudio;
@@ -35,6 +36,7 @@ public class EnemyAttrs : MonoBehaviour
             return;
 
         currentHealth -= amount;
+        Instantiate(HurtObject, transform.position, transform.rotation);
 
         if (currentHealth <= 0)
         {
@@ -48,7 +50,7 @@ public class EnemyAttrs : MonoBehaviour
         isDead = true;
         enemyAudio.Play();
         //collider.isTrigger = true;
-        Destroy(gameObject, 0.5f);
+        Destroy(gameObject, 0.1f);
     }
 
     public int getCurrentHealth()
